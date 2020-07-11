@@ -1,0 +1,204 @@
+<html>
+	<header>
+		<style type="text/css">
+		body {
+  text-align: center;
+  background-color: #eee;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.loader {
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  
+  width: 100px;
+  height: 100px;
+  
+  margin-top: -100px;
+  margin-left: -50px;
+  
+  perspective: 1000px;
+  transform-style: preserv3d;
+}
+.loader--reflect {
+  margin-top: 0;
+  -moz-transform: scale(1, -1);
+-webkit-transform: scale(1, -1);
+-o-transform: scale(1, -1);
+-ms-transform: scale(1, -1);
+transform: scale(1, -1);
+}
+.loader--reflect:after {
+-moz-transform: scale(1, -1);
+-webkit-transform: scale(1, -1);
+-o-transform: scale(1, -1);
+-ms-transform: scale(1, -1);
+transform: scale(1, -1);
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -25%;
+  width: 190%;
+  height: 120%;
+  background: linear-gradient(0deg, rgba(238, 238, 238, 1), rgba(238, 238, 238, 1) 20%, rgba(238, 238, 238, 0.3));
+}
+.bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font: sans-serif;
+  width: 50px;
+  height: 100px;
+  padding: 30px 0px;
+  text-align: center;
+  color: white;
+  background-color: #1e3f57;
+  border-radius: 5px;
+  font-size: 30px;
+  transform: scaleY(0);
+  transform-style: preserve-3d;
+  animation: bar 4s cubic-bezier(.81,.04,.4,.7) infinite;
+}
+.bar-r{
+ 
+}
+.bar:nth-child(1) {
+  left: 0px;
+  background-color: #6A1B9A;
+  
+  animation-delay: 50ms;
+}
+.bar:nth-child(2) {
+  left: 40px;
+  background-color: #7B1FA2;
+  
+  animation-delay: 50ms;
+}
+
+.bar:nth-child(3) {
+  left: 80px;
+  
+  background-color: #8E24AA;
+  
+  animation-delay: 100ms;
+}
+
+.bar:nth-child(4) {
+  left: 120px;
+  
+  background-color: #9C27B0;
+  
+  animation-delay: 150ms;
+}
+
+.bar:nth-child(5) {
+  left: 160px;
+  
+  background-color: #AB47BC;
+  
+  animation-delay: 200ms;
+}
+
+.bar:nth-child(6) {
+  left: 200px;
+  
+  background-color: #BA68C8;
+  
+  animation-delay: 250ms;
+}
+
+.bar:nth-child(7) {
+  left: 240px;
+  
+  background-color: #CE93D8;
+  
+  animation-delay: 300ms;
+}
+
+.bar:nth-child(8) {
+  left: 280px;
+  
+  background-color: #E1BEE7;
+  
+  animation-delay: 350ms;
+}
+
+
+.loader--reflect .bar {
+  animation-name: bar-reflect;
+}
+.button1,.button2{
+  color: white;
+  width: 110px;
+  font-size: 20px;
+  z-index: 10;
+  background: #555;
+  border: 0;
+  border-radius: 0;
+  position: absolute;
+  position: fixed;
+  line-height: 40px;
+  outline: 0;
+  cursor: pointer;
+  display: none;
+}
+button:hover{
+  transition: box-shadow 300ms ease-in-out;
+   box-shadow: 0 10px 13px rgba(0,0,0,0.20), 0 10px 13px rgba(0,0,0,0.33);
+}
+button:active{
+  transition: box-shadow 100ms ease-in-out;
+   box-shadow: 0 1px 2px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.33);
+}
+
+@keyframes bar {
+  0% {
+    transform: rotateZ(-360deg) rotateX(-360deg);
+
+ 
+  }
+  50%,100% {
+    transform: rotateZ(0) rotateX(0);
+  }
+}
+
+@keyframes bar-reflect {
+  0% {
+    transform: rotateZ(-360deg) rotateX(-360deg);
+  }
+  50%,100% {
+    transform: rotateZ(0) rotateX(0);
+  }
+}
+
+  
+		</style>
+	</header>
+	<body>
+  <div style="position: absolute;left:44%; top: 30px;margin: 0;">
+		<img  src="CG_final/icon.ico" width="100px;">
+    <br>
+    <a style="font-size: 20px;color: black;z-index: 100;height: 50px;width: 100px;" class="button1">Click to start..</a>
+    </div>
+
+    
+
+		<div class="loader">
+  <div class="bar">3</div>
+  <div class="bar">D</div>
+  <div class="bar">T</div>
+  
+</div>
+
+<div class="loader loader--reflect">
+ <div class="bar">3</div>
+  <div class="bar">D</div>
+  <div class="bar">T</div>
+  
+</div>	
+	</body>
+</html>

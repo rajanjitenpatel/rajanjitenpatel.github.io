@@ -1,0 +1,591 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DrivePlus</title>
+        <meta name="description" content="Drive Plus">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" 
+          type="image/png" 
+          href="Logo.jpg">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+
+
+        <link rel="stylesheet" type="text/css" href="css/pater.css" />
+        <link rel="stylesheet" type="text/css" href="css/componen2t.css" />
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+        <script>
+            document.documentElement.className = 'js';
+        </script>
+
+        <!-- Matirized kit -->
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+         <!-- CSS Files -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/css/material-kit.css" rel="stylesheet"/>
+
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="assets/css/demo.css" rel="stylesheet" />
+
+
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+            <style>
+
+            html{
+                overflow-x: hidden;
+            }
+
+            .navbar.navbar-transparent{
+                background: rgba(0,0,0,0.3);
+            }
+          .logo-container .logo
+            {
+                width: 100px;
+            }
+            .main-raised{
+                margin: 0px 55px 60px;
+            }
+
+
+                @media screen and (max-width: 480px) {
+                  .logo-container .logo {
+                        width: 50px; 
+                    }
+                    .main-raised{
+                margin: 0px 25px 60px;
+            }
+                }
+                @media screen and (max-width:1199px){
+                    .navbar.navbar-transparent{
+                     background: rgba(254,86,18,1);
+                    }
+                    .hidden-md{display:none !important;
+
+                    }
+                
+
+                }
+                @media screen and (min-width:1199px){
+                    .hidden-dt{display:none !important}
+                }
+            </style>
+        </head>
+        <body style="background: #eee;">
+            <div id="large-header" style="position: fixed;top:0;width: 100%;overflow:hidden;z-index:-1;">
+                    <canvas id="demo-canvas"></canvas>
+             </div>
+
+
+
+
+
+            <nav class="navbar navbar-fixed-top" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                                <a class="navbar-brand" href="index.html" style="padding-top: 0px">
+                                    <div class="logo-container">
+                                        <div class="logo img-raised" style="border-radius: 6px;border:0;">
+                                            <span><img src="logo.jpg" class="img-rounded img-responsive img-raised"/></span>
+                                        </div>
+                                        <div class="brand" style="font-size: 25px;color: white;width:130px;margin-top: 15px;margin-left: 20px;">
+                                            <b>Drive Plus</b>
+                                        </div>
+                                    </div>
+                            </a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">
+                                        <i class="material-icons">home</i>
+                                    Home</a></li>
+                                    <li><a href="examples/login-page.html">Login</a></li>
+                                    <li><a href="examples/signup-page.html">SignUp</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="material-icons">info_outline</i>
+                                        More information <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                          <li><a href="#">How to Use.</a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="#">Support help.</a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="#">Contact Us.</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                    <div class="col-md-10 col-md-offset-1 ">
+                    <div class="card card-raised card-carousel">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <div class="carousel slide" data-ride="carousel">
+
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators" >
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+
+                                    <div class="carousel-inner">
+                                        <div class="item">
+                                            <img class="hidden-md" src="assets/img/1.jpg" alt="Awesome Image">
+                                            <img class="hidden-dt" src="assets/img/11.jpg" alt="Awesome Image">
+                                            <div class="carousel-caption">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img class="hidden-md" src="assets/img/2.jpg" alt="Awesome Image">
+                                            <img class="hidden-dt" src="assets/img/22.jpg" alt="Awesome Image">
+                                            <div class="carousel-caption">
+                                            </div>
+                                        </div>
+                                        <div class="item active">
+                                            <img class="hidden-md" src="assets/img/3.jpg" alt="Awesome Image">
+                                            <img class="hidden-dt" src="assets/img/33.jpg" alt="Awesome Image">
+                                            <div class="carousel-caption">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                        <i class="material-icons">keyboard_arrow_right</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+
+
+
+
+
+
+                        <br>
+                        <br>
+
+
+        <div class="main main-raised ">
+            <div class="container ">
+                <div class="section text-center section-landing">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="title">Let's talk DrivePlus</h2>
+                            <h5 class="description">Hello users, Wellcome to DrivePlus.DrivePlus is a web application not only which show simple details it is something more than that. DrivePlus prime focus on safe driving & avoid accident.Following are features which make DrivePlus special from others.</h5>
+                        </div>
+                    </div>
+                     <main>
+                        <div class="features hidden-dt">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <div class="icon icon-primary">
+                                      <i class="tilter__image fa fa-map-o fa-5x" aria-hidden="true" style="margin-top: 90px;color: #F35910;"></i>
+                                    </div>
+                                    <h4 class="info-title">Map</h4>
+                                    <p>Find live traffic, traveling route, distance ,speed limit of roads, location of rest vehicle on road, locate accidents.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <div class="icon icon-success">
+                                       
+                                        <i class="fa fa-bar-chart fa-5x" style="margin-top: 90px;color: #47B04B;"></i>
+                                    </div>
+                                    <h3 class="info-title">Driving Stats</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Infomation about your driving performance which help you improve your driving to be better and safe driving.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <div class="icon icon-danger">
+                                        <i class="fa fa-exclamation-triangle fa-5x" style="margin-top: 90px;color: #F7412D;" aria-hidden="true"></i>
+                                    </div>
+                                     <h3 class="info-title" style="font-family: 'Roboto';">Driving Alerts</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Always help you to avoid critical situation. Weather alert, Accident alert, Rest vehicle alert, Over speeding alert, using phone while driving alert.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                        <div class="features hidden-dt">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <div class="icon icon-primary">
+                                       <i class="tilter__image fa fa-play fa-5x" aria-hidden="true" style="margin-top: 90px;color: #F35910;"></i>
+                                            
+                                    </div>
+                                    <h3 class="info__title" style="font-family: 'Roboto';">Video Tutorials</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Learning via video always help you to drive safe & help you to take best decision in critical situation.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <div class="icon icon-success">
+                                       
+                                        <i class="material-icons fa-5x" style="margin-top: 90px;color: #47B04B;">verified_user</i>
+                                    </div>
+                                    <h3 class="info__title" style="font-family: 'Roboto';">Safe Driving</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Get aware about latest news about accidents, safe driving tips.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <div class="icon icon-danger">
+                                        <i class="fa fa-cogs fa-5x" style="margin-top: 90px;color: #F7412D;" aria-hidden="true"></i>
+                                  
+                                    </div>
+                                    <h3 class="info__title" style="font-family: 'Roboto';">Car Maintenance</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Alway help you to remind about car services, maintenance dates & car insurance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="features hidden-md">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="examples/login-page.html" class="tilter tilter--1" style="color: black;">
+                                        <figure class="tilter__figure">
+                                            <i class="tilter__image fa fa-map-o fa-5x" aria-hidden="true" style="margin-top: 90px;color: #F35910;"></i>
+                                            <figcaption class="tilter__caption">
+                                                <h3 class="tilter__title" style="font-family: 'Roboto';">Map</h3>
+                                                <p class="tilter__description">Find live traffic, traveling route, distance ,speed limit of roads, location of rest vehicle on road, locate accidents.</p>
+                                            </figcaption>
+                                            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                                <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                            </svg>
+                                        </figure>
+                                    </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="examples/login-page.html" class="tilter tilter--1" style="color: black;">
+                                        <figure class="tilter__figure">
+                                            <i class="fa fa-bar-chart fa-5x" style="margin-top: 90px;color: #47B04B;"></i>
+                                            <figcaption class="tilter__caption">
+                                                <h3 class="tilter__title" style="font-family: 'Roboto';">Driving Stats</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Infomation about your driving performance which help you improve your driving to be better and safe driving.</p>
+                                            </figcaption>
+                                            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                                <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                            </svg>
+                                        </figure>
+                                    </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="examples/login-page.html" class="tilter tilter--1" style="color: black;">
+                                        <figure class="tilter__figure">
+                                        <i class="fa fa-exclamation-triangle fa-5x" style="margin-top: 90px;color: #F7412D;" aria-hidden="true"></i>
+                                  
+                                            <figcaption class="tilter__caption">
+                                                <h3 class="tilter__title" style="font-family: 'Roboto';">Driving Alerts</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Always help you to avoid critical situation. Weather alert, Accident alert, Rest vehicle alert, Over speeding alert, using phone while driving alert.</p>
+                                            </figcaption>
+                                            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                                <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                            </svg>
+                                        </figure>
+                                    </a>
+                    
+                            </div>
+
+
+
+
+
+                        <div class="features hidden-md">
+                        <div class="row">
+                            <div class="col-md-4" style="">
+                                <a href="examples/login-page.html" class="tilter tilter--1" style="color: black;">
+                                        <figure class="tilter__figure">
+                                            <i class="tilter__image fa fa-play fa-5x" aria-hidden="true" style="margin-top: 90px;color: #F35910;"></i>
+                                            <figcaption class="tilter__caption">
+                                                <h3 class="tilter__title" style="font-family: 'Roboto';">Video Tutorials</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Learning via video always help you to drive safe & help you to take best decision in critical situation.</p>
+                                            </figcaption>
+                                            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                                <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                            </svg>
+                                        </figure>
+                                    </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="examples/login-page.html" class="tilter tilter--1" style="color: black;">
+                                        <figure class="tilter__figure">
+                                            <i class="material-icons fa-5x" style="margin-top: 90px;color: #47B04B;">verified_user</i>
+                                            <figcaption class="tilter__caption">
+                                                <h3 class="tilter__title" style="font-family: 'Roboto';">Safe Driving</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Get aware about latest news about accidents, safe driving tips.</p>
+                                            </figcaption>
+                                            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                                <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                            </svg>
+                                        </figure>
+                                    </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="examples/login-page.html" class="tilter tilter--1" style="color: black;">
+                                        <figure class="tilter__figure">
+                                        <i class="fa fa-cogs fa-5x" style="margin-top: 90px;color: #F7412D;" aria-hidden="true"></i>
+                                  
+                                            <figcaption class="tilter__caption">
+                                                <h3 class="tilter__title" style="font-family: 'Roboto';">Car Maintenance</h3>
+                                                <p class="tilter__description" style="font-family: "Roboto", "Helvetica", "Arial", sans-serif;">Alway help you to remind about car services, maintenance dates & car insurance.</p>
+                                            </figcaption>
+                                            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                                                <path d="M20.5,20.5h260v375h-260V20.5z" />
+                                            </svg>
+                                        </figure>
+                                    </a>
+                    
+                            </div>
+                            
+                        </div>
+                       
+            
+        </main>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <footer class="footer">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Safe Drive
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           About Drive Plus
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Licenses
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright pull-right">
+                 2017, Developed by <b>RjPrime - Rajan Jiten Patel</b> and Design made by Creative Tim.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+ <!--   Core JS Files   -->
+            <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+            <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+            <script src="assets/js/material.min.js"></script>
+
+            <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+           
+            <!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+            <script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+            <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+            <script src="assets/js/material-kit.js" type="text/javascript"></script>
+
+            <script type="text/javascript">
+
+                $().ready(function(){
+                    // the body of this function is in assets/material-kit.js
+                    materialKit.initSliders();
+                    window_width = $(window).width();
+
+                    if (window_width >= 992){
+                        big_image = $('.wrapper > .header');
+
+                        $(window).on('scroll', materialKitDemo.checkScrollForParallax);
+                    }
+
+                });
+            </script>
+
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+       
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/anime.min.js"></script>
+        <script src="js/main2.js"></script>
+
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+         <script src="js/rAF.js"></script>
+        <script src="js/demo-1.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        <script>
+        (function() {
+            var tiltSettings = [
+            {},
+            {
+                movement: {
+                    imgWrapper : {
+                        translation : {x: 10, y: 10, z: 30},
+                        rotation : {x: 0, y: -100, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
+                    lines : {
+                        translation : {x: 10, y: 10, z: [0,70]},
+                        rotation : {x: 0, y: 0, z: -2},
+                        reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+                    },
+                    caption : {
+                        rotation : {x: 0, y: 0, z: 2},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
+                    
+                }
+            }];
+
+            function init() {
+                var idx = 0;
+                [].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) { 
+                    idx = pos%6 === 0 ? idx+1 : idx;
+                    new TiltFx(el, tiltSettings[idx-1]);
+                });
+            }
+
+            // Preload all images.
+            imagesLoaded(document.querySelector('main'), function() {
+                document.body.classList.remove('loading');
+                init();
+            });
+
+            // REMOVE THIS!
+            // For Demo purposes only. Prevent the click event.
+            [].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
+                el.addEventListener('click', function(ev) { ev.preventDefault(); });
+            });
+
+            var pater = document.querySelector('.pater'),
+                paterSVG = pater.querySelector('.pater__svg'),
+                pathEl = paterSVG.querySelector('path'),
+                paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+
+            pater.addEventListener('mouseenter', function() {
+                anime.remove(pathEl);
+                anime({
+                    targets: pathEl,
+                    d: paths.active,
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            });
+
+            pater.addEventListener('mouseleave', function() {
+                anime.remove(pathEl);
+                anime({
+                    targets: pathEl,
+                    d: paths.default,
+                    duration: 400,
+                    easing: 'easeOutExpo'
+                });
+            });
+        })();
+        </script>
+    </body>
+</html>

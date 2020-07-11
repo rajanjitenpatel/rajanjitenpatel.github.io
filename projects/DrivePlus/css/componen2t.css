@@ -1,0 +1,93 @@
+.tilter {
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 415px;
+	margin: 1.5em 2.5em;
+	flex: none;
+	perspective: 1000px;
+}
+
+.tilter * {
+	pointer-events: none;
+}
+
+.tilter:hover,
+.tilter:focus {
+	outline: none;
+}
+
+/*
+.tilter__figure,
+.tilter__deco,
+.tilter__caption {
+	will-change: transform;
+}*/
+
+.tilter__figure,
+.tilter__image {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.tilter__figure > * {
+	transform: translateZ(0px); /* Force correct stacking order */
+}
+
+.smooth .tilter__figure,
+.smooth .tilter__deco--overlay,
+.smooth .tilter__deco--lines,
+.smooth .tilter__deco--shine div,
+.smooth .tilter__caption {
+	transition: transform 0.2s ease-out;
+}
+
+.tilter__figure {
+	position: relative;
+}
+
+.tilter__figure::before {
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	box-shadow: 10 10px 10px rgba(35,32,39,0.5);
+}
+
+.tilter__deco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+.tilter__deco--lines {
+	fill: none;
+	stroke: #333;
+	stroke-width: 1.5px;
+}
+
+.tilter__caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 4em;
+}
+
+.tilter__title {
+	margin: 0;
+	font-weight: normal;
+	line-height: 1;
+}
+
+.tilter__description {
+	margin: 1em 0 0 0;
+}

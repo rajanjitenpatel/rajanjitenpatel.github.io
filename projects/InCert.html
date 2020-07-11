@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#8D44AD" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>InCert</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+        <meta name="google-site-verification" content="C8D0HZJvYMNRjFORiV_9DWgjynR25uK3l6SmRtJVPNI">
+        <meta property="og:site_name" content="InCert"/>
+        <meta property="og:title" content="Project"/>
+        <meta property="og:url" content="http://rjprime.info/projects/InCert.html"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="InCert - Project Developed by RjPrime and his team."/>
+        <meta property="og:image" content="http://rjprime.info/img/RjPrime-logo.jpg"/>
+        <meta property="og:image:width" content="500"/>
+        <meta property="og:image:height" content="439"/>
+        <meta itemprop="name" content="InCert"/>
+        <meta itemprop="url" content="http://rjprime.info/projects/InCert.html"/>
+        <meta itemprop="description" content="InCert - Project Developed by RjPrime and his team."/>
+        <meta itemprop="thumbnailUrl" content="http://rjprime.info/apple-touch-icon.png"/>
+        <link rel="image_src" href="http://rjprime.info/img/RjPrime-logo.jpg" />
+        <meta itemprop="image" content="http://rjprime.info/img/RjPrime-logo.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../favicon.png" type="image/png" sizes="100x100">
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <!-- CSS Files -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../assets/css/now-ui-kit.css" rel="stylesheet" />
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="../assets/css/demo.css" rel="stylesheet" />
+        <style>
+            .line_green{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 2px;
+                background: #39b54a;
+            }
+            .line_blue{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 2px;
+                background: #0072bc;
+            }
+            .line_primary{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 2px;
+                background: #8d45ad;
+            }
+            .line_gray{
+                margin: 5px 20px;
+                padding: 0;
+                width: calc ( 100% - 40px );
+                height: 2px;
+                background: #ddd;
+            }
+            dot{
+                width: 10px;
+                height: 10px;
+                border-radius: 10px; 
+                content: " ";
+                margin: 10px auto;
+            }
+            .blue{
+                background: #0072bc;
+            }
+            .green{
+                background: #39b54a;
+            }
+            .primary{
+                background: #8d45ad;
+            }
+            .section-images{
+                    height: 650px;  
+                }
+            .marg_side{
+                margin: 100px auto;
+            }
+            @media only screen and (max-width: 768px)  {
+                .text_local{
+                font-size: 13px;
+                }
+                .section-images{
+                    height: 250px;  
+                }
+                .marg_side{
+                margin: 20px auto 0;
+                }
+                
+            }
+        </style>
+</head>
+
+<body class="landing-page sidebar-collapse">
+    <div class="modal fade" id="Contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Contact me</h4>
+              </div>
+              <div class="modal-body">
+                <b>Personal contact</b><br>
+                  Email - <a href="mailto:rajanjitenpatel@gmail.com?cc=rjprime.info@gmail.com&subject=Need to Contact Rajan Patel&body=Profile RjPrime Website Contact">rajanjitenpatel@gmail.com</a><br>
+                  Phone No. - <a href="tel:+917073352284">+91-7073352284</a><br><br>
+                <b>Officail contact</b><br>
+                  Email - <a href="mailto:rjprime.info@gmail.com?subject=Need to Contact Rajan Patel&body=Profile RjPrime Website Contact">rjprime.info@gmail.com</a><br>
+                  
+                  <br>
+                         <div class="text-center">
+                                <a href="https://twitter.com/RjPrime_info" class="btn btn-primary btn-icon btn-round">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="https://www.facebook.com/rjprime.info/" class="btn btn-primary btn-icon btn-round">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/rjprime" class="btn btn-primary btn-icon btn-round">
+                                <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCWABBzVpCW5yKnbwMW1xa8g" class="btn btn-primary btn-icon btn-round">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                                <a href="https://github.com/rajanjitenpatel" class="btn btn-primary btn-icon btn-round">
+                                    <i class="fa fa-github"></i>
+                                    </a>
+                        </div>        
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+<!--                <button type="button" class="btn btn-info btn-simple">Save</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+        <div class="container">
+            <div class="dropdown button-dropdown">
+                <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../index.html">Home</a>
+                    <a class="dropdown-item" href="index.html">Projects</a>
+                    <a class="dropdown-item" href="../rjprime/">Profile</a>
+                    <a class="dropdown-item" href="../blog/">Blog</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item"  data-toggle="modal" data-target="#Contact">Contact - Rajan Patel</a>
+                </div>
+            </div>
+            <div class="navbar-translate">
+                <a class="navbar-brand" style="text-transform: none;" href="../index.html" rel="tooltip" title="Tag Name" data-placement="bottom" target="_blank">
+                RjPrime
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="../assets/img/blurred-image-1.jpg">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../rjprime/index.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../projects/index.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/RjPrime_info" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <p class="d-lg-none d-xl-none">Twitter</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/rjprime.info/" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.linkedin.com/in/rjprime" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                            <p class="d-lg-none d-xl-none">LinkedIn</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" data-placement="bottom"  data-toggle="modal" data-target="#Contact" target="_blank">
+                            <i class="now-ui-icons travel_info"></i>
+                            <p class="d-lg-none d-xl-none">Contact Me</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper">
+        <div class="page-header page-header-small">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/b23.jpg');overflow-y: hidden;">
+            </div>
+            <div class="container">
+                <div class="content-center">
+                        
+                    <h1 class="title" style="font-size: 34px;">InCert</h1>
+                     <div class="text-center">
+                         <a target="_blank" href="../projects/InCert/" class="btn btn-primary btn-round btn-lg" style="padding: 10px 20px;">Visit Application</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        <div style="background: #fff;">
+        <div class="col-md-11 ml-auto mr-auto">
+        <div class="row" style="background: #fff;flex-wrap: wrap-reverse;margin: 0;flex-wrap: wrap;">
+             <div class="col-md-4">
+<!--
+                 <span class="badge badge-default">Default</span>
+                <span class="badge badge-primary">Primary</span>
+                <span class="badge badge-info">Info</span>
+                <span class="badge badge-warning">Warning</span>
+                <span class="badge badge-danger">Danger</span>
+-->
+                    <div style="max-width: 200px;margin: 20px auto;text-align: center;">
+                        <img src="../assets/img/incert.jpg"/>
+                        <h1 class="title" style="font-size: 34px;">InCert</h1>
+                        
+                     </div>
+                    <div style="width: 350px;margin: 10px auto;">
+                           <span style="vertical-align: middle; font-size: 16px;padding: 10px 10px;">Development Status: </span><span class="badge badge-primary" style="font-size: 16px;padding: 6px 20px;font-weight: 400;">Complete</span>
+                    </div>
+            </div>
+             <div class="col-md-8">
+                 <div class="marg_side" style=" max-width: 700px;">
+                            <p style="text-align: center;">Why InCert?</p>
+                             <ul>
+                                <li>Purpose of software to fully automate process for certification requesting in university.</li>  
+                                <li>Developed for University use, by five students as a term under professor assessment.</li>
+                                <li>Released and Deployed by the Manipal University on 27th Jan 2017. Today more than 6000+ students are using this software services.</li>
+                                <li>Awarded first stand for innovative project in AlumNews Newsletter.</li>
+                             </ul>
+                        <br>
+                 </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+        
+      
+        
+        <div class="col-md-11 ml-auto mr-auto">
+        <div class="row" style="margin: 0;">
+            <div class="col-md-8">
+                <div class="description" style="color: black;font-weight: 400;text-align: left;">
+                          
+                        <h4 style="text-transform: uppercase;margin-top: 0;font-weight: 700;">Project Brief</h4>
+                        <div class="line_gray" style="border-top: 1px solid #ccc"></div>
+                        <br>
+                          <h5 style="font-weight: 700;">What InCert can do?</h5>
+                        <p style="font-size: 16px;">
+InCert. Well, that's not a typing error. The idea of this word comes from the database command INSERT. InCert stands for CERTificates required for an INternship.<br>
+Have you applied for an internship yet? If not, here is what you need to do- Firstly you need to visit the Training and Placement Office (TPO) of our college to know the procedure. Then, you have to visit the Head of your Department(HOD) to get a letter signed and submit the same to the TPO requesting for the required certificates. This is followed by several visits to the placement office to collect the certificates until they are ready. All of this in the scorching heat of the Sun in Jaipur!<br>
+Here is where InCert come in.<br>
+InCert automated this entire process so that you can have your certificates without undergoing such a tedious process. In this era of technology where constant efforts are being made to minimize human efforts in all aspects of life, InCert serves the same purpose.<br>
+In simple words InCert is basically the automation of the above mentioned process. It's a software wherein a student of MUJ irrespective of where he is, can apply for the certificates just by logging in and selecting  the certificates required, along with some necessary details and later get notified about the day he needs to go and collect the certificates from the placement office.<br>
+Once the student has applied he can sit back and relax! What the software will now do is that it would send an email to the HOD for the necessary verifications where he can either reject or accept the student's application. If rejected, a mail would be sent to the student notifying him about the rejection of his application and asking him to meet the HOD the next working day. If accepted, an approval mail is sent to the applying student and another mail is sent to the placement cell about the student's application.<br>
+The request will now be reflected in the database of our software InCert installed in the computers of the placement cell. The person in charge will be able to process single or even multiple applications in a go. Just by clicking the generate button, the certificates will be generated with the details of the students automatically populated in them and at the same time,sending an email to the students to collect the certificates from the office at the mentioned date and time.<br>
+Taking the process online provides us several advantages like: It saves the crucial time of the student, the HOD would not have to leave his important work just to sign an application and the TPO can generate multiple certificates instead of typing one at a time.<br>
+Thanks to the constant support from Mr. Manu Srivastava and Dr. Roheet Bhatnagar.<br>
+In this age where people want everything on-the-go such an application not only makes everything convenient and immediate but also assures quality of work! 
+ </p>
+ <p style="font-size: 16px;">Have a peek into our application <a href="InCert/">Here</a></p>
+</div>
+ </div>
+            
+            
+            <div class="col-md-4">
+                <div style="width: 100%;">
+                    <h2 class="title text-center" style="margin: 20px 10px 10px;font-size: 20px;">Recent Projects</h2>
+                    <div class="line_gray"></div>
+                    <div style="width: 100%;padding: 10px;">
+                        <div style="width: 80px;display: inline-block;padding: 10px 0 10px 20px;">
+                            <img src="../assets/img/DrivePlus.jpg"/>
+                        </div>
+                        <div style="display: inline-block;vertical-align: top;margin: 10px;">
+                            <h5 style="font-size: 15px;font-weight: 700;margin-bottom: 0px;">DrivePlus</h5>
+                            <a href="DrivePlus.html"><p style="margin: 0;">View</p></a>
+                        </div>
+                    </div>
+                    <div style="width: 100%;padding: 10px;">
+                        <div style="width: 80px;display: inline-block;padding: 10px 0 10px 20px;">
+                            <img src="../assets/img/3DT.jpg"/>
+                        </div>
+                        <div style="display: inline-block;vertical-align: top;margin: 10px;">
+                            <h5 style="font-size: 15px;font-weight: 700;margin-bottom: 0px;">3DT</h5>
+                            <a href="3DT.html"><p style="margin: 0;">View</p></a>
+                        </div>
+                    </div>
+                    <div style="width: 100%;padding: 10px;">
+                        <div style="width: 80px;display: inline-block;padding: 10px 0 10px 20px;">
+                            <img src="../assets/img/AHBD.jpg"/>
+                        </div>
+                        <div style="display: inline-block;vertical-align: top;margin: 10px;width: calc(100% - 110px);">
+                            <h5 style="font-size: 13px;font-weight: 700;margin-bottom: 0px;">Advance human behavior detection.</h5>
+                            <a href="AHBD.html"><p style="margin: 0;">View</p></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="section section-team text-center">
+            <div class="container">
+                <h2 class="title">Here is our team</h2>
+                <div class="team">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="team-player">
+                                <img src="../assets/img/km.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                <h4 class="title">Karan Malhotra</h4>
+                                <p class="category text-primary">Developer</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-player">
+                                <img src="../assets/img/Rajan%20Jiten%20Patel.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                <h4 class="title">Rajan Jiten Patel</h4>
+                                <p class="category text-primary">Developer | Designer</p>
+                                <a href="../rjprime/index.html" class="btn btn-primary btn-round btn-lg" style="padding: 10px 15px;">Profile</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-player">
+                                <img src="../assets/img/kv.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                <h4 class="title">Karan D Vasa</h4>
+                                <p class="category text-primary">Developer</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 ml-auto mr-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="team-player">
+                                <img src="../assets/img/ms.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                <h4 class="title">Mayank Sareen</h4>
+                                <p class="category text-primary">Developer</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="team-player">
+                                <img src="../assets/img/rh.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                <h4 class="title">Rishav Hada</h4>
+                                <p class="category text-primary">Developer | Designer</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div id="work" class="section section-contact-us text-center">
+            <div class="container">
+                <h2 class="title">Want to work with us?</h2>
+                <p class="description">Your opinion is very important to us.</p>
+                <div class="row">
+                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                        <form method="get" action="mailto:rjprime.info@gmail.com">
+                        <div class="input-group input-lg">
+                            <span class="input-group-addon">
+                                <i class="now-ui-icons users_circle-08"></i>
+                            </span>
+                            <input type="text" name="subject" class="form-control" placeholder="First Name...">
+                        </div>
+                        <div class="input-group input-lg">
+                            <span class="input-group-addon">
+                                <i class="now-ui-icons ui-1_email-85"></i>
+                            </span>
+                            <input type="email" name="cc" class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="textarea-container">
+                            <textarea class="form-control" name="body" rows="4" cols="80" placeholder="Type a message...">InCert -
+                            </textarea>
+                        </div>
+                        <div class="send-button">
+                            <button style="submit" class="btn btn-primary btn-round btn-block btn-lg">Send Message</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <footer class="footer footer-default">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                RjPrime
+                            </a>
+                        </li>
+                        <li>
+                            <a  data-toggle="modal" data-target="#Contact">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../RjPrime/#about">
+                                About me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../blog/">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+                                MIT License
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, Designed by
+                    <a href="#">Invision</a>. Coded by
+                    <a href="#">Creative Tim</a>.
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="../assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="../assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+
+</html>

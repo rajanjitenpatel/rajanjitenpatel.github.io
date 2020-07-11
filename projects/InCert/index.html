@@ -1,0 +1,27 @@
+<!-- 
+ * Copyright (c) 2016 Rajan Patel - (RjPrime)
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>InCert</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body onload="myFunction()">
+  <script type="text/javascript">
+    function myFunction() {
+            var w = window.innerWidth;
+            if(w<=600){
+                window.location.replace("./mobile/index.html");
+            }
+            else{
+                window.location.replace("./web/index.html");
+            }
+           
+        }
+  </script>
+  </body>
+</html>

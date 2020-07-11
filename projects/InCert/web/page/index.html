@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+  <head>
+     <meta charset="utf-8">
+    <title>InCert</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style1.css">
+       <link rel="icon" type="image/png" href="../images/icon.png">
+    <style>
+
+           select
+           {
+                 height:50px;
+                 width:100%;
+                 margin-bottom:13px;
+                 padding-left:10px;
+                 color:grey;
+
+           }
+           option
+           {
+
+           }
+    </style>
+  </head>
+
+  <body>
+      <img id="icon" height="60px" src="../images/icon.png" style="position: absolute; left:5%;top:50px;"/>
+<video poster="../image/bird-bg.jpg" autoplay="false" loop>
+    <source src="../images/background.mp4" type="video/mp4"/>
+</video>
+    <!-- multistep form -->
+<form id="msform" action="#" method="post">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Step 1</li>
+    <li>Step 2</li>
+    <li>Step 3</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Passion is the difference </h2>
+    <h3 class="fs-subtitle">between having a job or having a career.</h3>
+    <input type="text" name="fname" placeholder="First Name" />
+    <input type="text" name="lname" placeholder="Last Name" required />
+    <input type="text" name="regno" placeholder="Registration Number" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Life begins </h2>
+    <h3 class="fs-subtitle">at the end of your comfort zone</h3>
+    <input type="text" name="contact_no" placeholder="Contact NO"  />
+    <input type="text" name="email" placeholder="Email" />
+    <input type="text" name="degree" placeholder="Degree" />
+
+    <select name="branch">
+    <option disabled selected>Branch</option>
+    <option value="Computer Science and Engineering">Computer Science and Engineering </option>
+    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering </option>
+    <!--<input type="text" name="branch" placeholder="Branch" />  -->
+    </select>
+    <br>
+    <input type="text" name="sem" placeholder="Current Semester" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Be so good they cannot ignore you. </h2>
+    <h3 class="fs-subtitle">By Steve Martin</h3>
+    <input type="text" name="cgpa" placeholder="CGPA" />
+    <input type="text" name="comp_name" placeholder="Company Name" />
+   <div style="width: 100%;height: 10px;"></div>
+    <span style="text-decoration: underline;margin: 10px 0;" id="doc">Documents Required</span>
+    <div style="width: 100%;height: 10px;"></div>
+    <div><input style="display: inline-block;width: 15px;margin: 5px;" type="checkbox" name="bc" value="bc"><span>Bonafide Certificate</span><div>
+    <br>
+    <div><input style="display: inline-block;width: 15px;margin: 5px;" type="checkbox" name="cc" value="cc"><span>Character Certificate</span></div>
+    <br>
+    <div><input style="display: inline-block;width: 15px;margin: 5px;" type="checkbox" name="il" value="il"><span>Internship Letter</span></div>
+    <br>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </fieldset>
+</form>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+        <script src="../js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
