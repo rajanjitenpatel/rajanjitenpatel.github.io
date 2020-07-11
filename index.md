@@ -1,9 +1,419 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	Rajan Patel
-</body>
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#8D44AD" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>RjPrime</title>
+        <meta name="description" content=" RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. He had done projects on - Artificial Intelligence, Machine Learning, Internet of Things, Web Application, Web Design, Parallel Processing, Image Processing, Computer Graphics. Visit his personal website. "/>
+
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png"/>
+        <meta name="google-site-verification" content="C8D0HZJvYMNRjFORiV_9DWgjynR25uK3l6SmRtJVPNI">
+
+        <meta property="og:site_name" content="RjPrime"/>
+        <meta property="og:title" content="RjPrime - Rajan Jiten Patel"/>
+        <meta property="og:url" content="https://www.facebook.com/rjprime.info/"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. He had done projects on - Artificial Intelligence, Machine Learning, Web Application, Web Design, Parallel Processing, Image Processing & Computer Graphics."/>
+        <meta property="og:image" content="http://rjprime.info/Home/img/RjPrime-logo.jpg"/>
+        <meta property="og:image:width" content="500"/>
+        <meta property="og:image:height" content="439"/>
+
+        
+        <meta itemprop="description" content="RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. He had done projects on - Artificial Intelligence, Machine Learning, Web Application, Web Design, Parallel Processing, Image Processing & Computer Graphics. Visit his Website & follow him anyway."/>
+        <meta itemprop="thumbnailUrl" content="http://rjprime.info/apple-touch-icon.png"/>
+        <link rel="image_src" href="http://rjprime.info/img/RjPrime-logo.jpg" />
+
+        <meta name="twitter:title" content="RjPrime - Rajan Jiten Patel"/>
+        <meta name="twitter:image" content="http://rjprime.info/img/RjPrime-image.jpg"/>
+        <meta name="twitter:url" content="https://twitter.com/RjPrime_info"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:description" content="RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. Visit his Website & follow him anyway."/>
+
+
+<script type="application/ld+json"> {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Rajan Jiten Patel",
+  "url": "http://rjprime.info/",
+  "image": "http://rjprime.info/main.jpg",
+  "additionalName": "RjPrime",
+  "jobTitle": "COMPUTER ENGINEER | ENTREPRENEUR",
+  "sameAs": 
+    [ "https://www.linkedin.com/in/rjprime/",
+  "https://www.facebook.com/rjprime.info/",
+  "https://twitter.com/RjPrime_info",
+  "https://www.youtube.com/channel/UCWABBzVpCW5yKnbwMW1xa8g",
+  "https://github.com/rajanjitenpatel"
+    ],
+  "affiliation": "California State University, Long Beach",
+  "alumniOf": "Manipal University Jaipur",
+  "birthDate": "24th November 1995",
+  "birthPlace": "Ahmedabad, Gujarat",
+  "email": "rjprime.info@gmail.com",
+  "follows": "300+",
+  "gender": "male",
+  "nationality": "Indian",
+  "parent": "Jiten Patel"
+} </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="favicon.png" type="image/png" sizes="100x100">
+       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap_grid.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+        <style type="text/css">
+            body{
+                font-family: 'Montserrat', sans-serif;
+                color: #222;
+                font-size: 20px;
+            }
+            .title{
+                font-size: 35px;
+                font-weight: 600;
+            }
+            .mid-title{
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .low-title{
+                font-size: 17px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+            }
+            .contain {
+                
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .back-image{
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                background-color: #ecf0f1;
+                margin-bottom: 185px;
+
+            }
+            .footer {
+                background: #8d44ad;
+                padding: 80px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: -1;
+                color: #fff;
+            }
+            .footer .footer-stuff {
+                max-width: 640px;
+                margin: 0 auto
+            }
+            .text{
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                top: 0;
+                z-index: 2;
+            }
+            .ro{
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                top: 0;
+            }
+            .co-1{
+                display: inline-block;
+                width: 45%;
+                height: 100%;
+                
+            }
+            .co-2{
+                display: inline-block;
+                width: 40%;
+                height: 100%;
+            }
+            .co-2 img{
+                    right: 0px;
+                    bottom: 0px;
+                    width: 85%; 
+                    vertical-align: bottom;
+                    margin-bottom: 8px; 
+            }
+            .inner{
+                margin: 45px 0% 20px 15%;
+
+            }
+            .icon{
+                width: 70px;
+            }
+            #logo{
+                width: 170px;
+                height: 150px;
+            }
+            .row_1{
+                vertical-align: top;
+                margin-right: 20px;
+                display: -webkit-flex; /* Safari */
+                -webkit-flex-flow: column wrap; /* Safari 6.1+ */
+                display: flex;
+                flex-flow: column wrap;
+                height: 300px;
+                width: 140px;
+            }
+            .col{
+                width: 60px;
+            }
+            .quort {
+                font-size: 16px;
+                font-weight: 100;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                display: inline-block;width: calc( 100% - 300px);
+                margin: 0px 20px;
+                padding: 25px 50px;
+                vertical-align: top;
+
+            }
+           .more{
+                width: 80px;
+                
+             }.more_link{margin: 20px 0px;}
+            @media screen and (max-width: 1080px) {
+                .quort {
+                font-size: 14px;
+                font-weight: 100;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                display: inline-block;width: calc( 100% - 300px);
+                margin: 0px 10px;
+                padding: 20px 50px;
+                vertical-align: top;
+
+            }
+            }
+            @media screen and (max-width: 700px) {
+                .more{
+                width: 60px;
+             }.more_link{margin: 10px 0px 0px;}
+
+               .hide{ display: none; }
+                .quort {
+                font-size: 12px;
+                font-weight: 100;
+                text-align: left;
+                font-family: 'Open Sans', sans-serif;
+                display: inline-block;
+                width: calc( 100% - 20px);
+                margin: 0;
+                padding: 0px;
+                vertical-align: top;
+
+                }
+                 .row_1{
+                vertical-align: top;
+                margin-right: 20px;
+                display: -webkit-flex; /* Safari */
+                -webkit-flex-flow: column wrap; /* Safari 6.1+ */
+                display: flex;
+                flex-flow: column wrap;
+                height: 250px;
+                width: 140px;
+            }
+            .title{
+                font-size: 26px;
+                font-weight: 600;
+            }
+            .mid-title{
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .low-title{
+                font-size: 12px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+            }
+                #logo{
+                width: 145px;
+                height: 130px;
+            }
+                .inner{
+                margin: 10px 0% 20px 5%;}
+                .back-image{
+                    margin-bottom: 105px;
+                }
+                body{
+                    font-size: 16px;
+                }
+                .co-1{
+                    display: inline-block;
+                    width: 29%;
+                }
+                .co-2{
+                    display: inline-block;
+                    width: 67%;
+                }
+                .co-2 img{
+                    max-width: 300px;
+                    width: 120%; 
+                }
+                .footer {
+                    padding: 40px 0;
+                }
+                .icon{
+                width: 59px;
+                }
+            }
+
+.icon_effect {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-family: sans-serif;
+ }
+
+
+.icon_effect:after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  transform: rotate(30deg);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.6) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+  
+  animation-duration: 3s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  
+}
+
+@keyframes changewidth {
+	0%   {
+	    opacity: 0;
+    	top: -110%;
+  	    left: -210%;
+	}
+    50%  {
+    	transition-property: left, top, opacity;
+  	    transition-duration: 0.7s, 0.7s, 0.15s;
+  	    transition-timing-function: ease;
+  	    opacity: 1;
+  	    top: -30%;
+  	    left: -30%;
+    }
+    100% {
+    	opacity: 0;
+    	top: -110%;
+  	    left: -210%;
+    }
+}
+
+
+.icon_effect:active:after {
+  opacity: 0;
+}
+    </style>
+           
+    
+    </head>
+    <body>
+        <div class="contain">
+            <div class="back-image">
+                <div class="text">
+                    <div class="inner">
+                        <div style="display: inline-block;">
+                        <div style="display: inline-block;">
+                        <img id="logo" src="http://rjprime.info/img/RjPrime-logo.jpg"/>
+
+                        <div class="title"> RjPrime</div>
+                        <div class="mid-title">RAJAN JITEN PATEL</div>
+                        <div class="low-title" style="font-size: 14px;">E-Mail :- <a style="color: #000;" href="mailto:rajanjitenpatel@gmail.com?subject=Contact Rajan Patel&amp;body=Hi, Rajan Patel, \n">rajanjitenpatel@gmail.com</a></div>
+                        <div class="low-title"></div>
+                        </div>
+                        <div class="quort" style="text-align: justify;">
+                                <br>
+                                You are watching self-explanatory of <a style="color: #000;" href="http://rjprime.info/rjprime/">Rajan Jiten Patel - RjPrime</a>. Master student at California State University, Long Beach. He has done multiple projects in field of - Application Development, Data Science, IOT, Parallel Processing, Machine Learning & Deep Learning.<br><b>Have a look what he has achieved - </b>
+<span> <br><a class="more_link icon_effect" title="More" href="./rjprime/"><img class="more" src="Icon/more.png"/></a></span>
+                         </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="container" style="margin: 0; ">
+                        <div style="" class="row row_1">
+                            <div class="col">
+                                <a title="Facebook" href="https://www.facebook.com/rjprime.info/"><img class="icon" src="Icon/facebook.png"/></a>
+                            </div>
+                            <div class="col">
+                                <a title="Twitter" href="https://twitter.com/RjPrime_info"><img class="icon" src="Icon/twiter.png"/></a>
+                            </div>
+                            <div class="col">
+                                <a title="Youtube" href="https://www.youtube.com/channel/UCWABBzVpCW5yKnbwMW1xa8g"><img class="icon" src="Icon/youtube.png"/></a>
+                            </div>
+                            <div class="col">
+                                <a title="LinkedIn" href="https://www.linkedin.com/in/rjprime"><img class="icon" src="Icon/linkedin.png"/></a>
+                            </div>
+                            <div class="col">
+                                <a title="GitHub" href="https://github.com/rajanjitenpatel"><img class="icon" src="Icon/github.png"/></a>
+                            </div>
+                            <div class="col">
+                                <a title="HackerRack" href="https://www.hackerrank.com/rjprime"><img class="icon" src="Icon/hackerrank.png"/></a>
+                            </div>
+                            <div class="col">
+                                <a title="LeetCode" href="https://leetcode.com/rjprime/"><img class="icon" src="Icon/leetcode.png"/></a>
+                            </div>
+                             <div class="col hide">
+                                <a title="More" href="/rjprime/"><img class="icon" src="Icon/more.png"/></a>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="ro">
+                <div class="co-1">
+
+                </div>
+                <div class="co-2">
+                    <img src="main.jpg">
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="footer">     
+                <div class="row footer-stuff">
+                     <div class="columns twelve" style="text-align: center;">-  Design & Developed by RjPrime.  -</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
