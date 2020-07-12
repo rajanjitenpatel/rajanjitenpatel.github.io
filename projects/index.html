@@ -1,8 +1,606 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Refresh" content="0; url=//www.rjprime.info/projects/" />
-  </head>
-  <body>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#8D44AD" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Projects</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta name="google-site-verification" content="C8D0HZJvYMNRjFORiV_9DWgjynR25uK3l6SmRtJVPNI">
+    <meta property="og:site_name" content="RjPrime - Projects" />
+    <meta property="og:title" content="Projects - Rajan Jiten Patel" />
+    <meta property="og:url" content="http://rjprime.info/projects" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Projects - RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. He had done projects on - App Development, Web Application, Web Design, Parallel Processing, Image Processing & Computer Graphics." />
+    <meta property="og:image" content="http://rjprime.info/img/RjPrime-logo.jpg" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="439" />
+    <meta itemprop="name" content="Projects - Rajan Jiten Patel" />
+    <meta itemprop="url" content="http://rjprime.info/projects/" />
+    <meta itemprop="description" content="Projects - RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. He had done projects on - App Development, Web Application, Web Design, Parallel Processing, Image Processing & Computer Graphics. Visit his Website & follow him anyway." />
+    <meta itemprop="thumbnailUrl" content="http://rjprime.info/apple-touch-icon.png" />
+    <link rel="image_src" href="http://rjprime.info/img/RjPrime-logo.jpg" />
+    <meta itemprop="image" content="http://rjprime.info/img/RjPrime-logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="100x100">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/now-ui-kit.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128371882-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-128371882-1');
+    </script>
+    <style>
+        .no_hover:hover {
+            text-decoration: none;
+        }
+        
+        .line_green {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background: #39b54a;
+        }
+        
+        .line_blue {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background: #0072bc;
+        }
+        
+        .line_primary {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background: #8d45ad;
+        }
+        
+        .line_gray {
+            visibility: hidden;
+            margin: 5px 20px;
+            padding: 0;
+            width: calc ( 100% - 40px);
+            height: 2px;
+            background: #ddd;
+        }
+        
+        .live_project {
+            width: 100%;
+            background: #fff;
+            margin: 15px auto;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+        
+        .live_project:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        
+        .img_project {
+            width: 180px;
+            margin: 20px auto;
+        }
+        
+        .right_border {
+            border-right: 1px solid #ccc;
+            margin: 20px;
+        }
+        
+        .project_contain {
+            padding: 10px 10px;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            content: " ";
+            margin: 10px auto;
+        }
+        
+        .blue {
+            background: #0072bc;
+        }
+        
+        .green {
+            background: #39b54a;
+        }
+        
+        .primary {
+            background: #8d45ad;
+        }
+        
+        .laptop_marg {
+            margin-top: 40px;
+        }
+        
+        .view_button {
+            width: calc ( 100% - 20px);
+            margin: 10px 50px;
+            padding: 5px;
+            text-align: center;
+            font-weight: 700;
+            border: 1px solid #8d45ad;
+            border-radius: 10px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .right_border {
+                border: none;
+            }
+            .project_contain {
+                padding: 0px 15px;
+            }
+            .laptop_marg {
+                margin-top: 10px;
+            }
+            .view_button {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="landing-page sidebar-collapse">
+    <div class="modal fade" id="Contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Contact me</h4> </div>
+                <div class="modal-body"> <b>Personal contact</b>
+                    <br>Email - <a href="mailto:rajanjitenpatel@gmail.com?cc=rjprime.info@gmail.com&subject=Need to Contact Rajan Patel&body=Profile RjPrime Website Contact">rajanjitenpatel@gmail.com</a>
+                    <br>Phone No. - <a href="tel:+15622768710">+1 (562)276-8710</a>
+                    <br>
+                    <br><b>Officail contact</b>
+                    <br>Email - <a href="mailto:rjprime.info@gmail.com?subject=Need to Contact Rajan Patel&body=Profile RjPrime Website Contact">rjprime.info@gmail.com</a>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                        <a href="https://twitter.com/RjPrime_info" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-facebook-square"></i> </a>
+                        <a href="https://www.facebook.com/rjprime.info/" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-twitter"></i> </a>
+                        <a href="https://www.linkedin.com/in/rjprime" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-linkedin"></i> </a>
+                        <a href="https://www.youtube.com/channel/UCWABBzVpCW5yKnbwMW1xa8g" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-youtube"></i> </a>
+                        <a href="https://github.com/rajanjitenpatel" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-github"></i> </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+        <div class="container">
+            <div class="dropdown button-dropdown">
+                <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"> <span class="button-bar"></span> <span class="button-bar"></span> <span class="button-bar"></span> </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="../index.html">Home</a> <a class="dropdown-item" href="#">Projects</a> <a class="dropdown-item" href="../rjprime/#resume">Profile</a> <a class="dropdown-item" href="../blog/">Blog</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" data-toggle="modal" data-target="#Contact">Contact - Rajan Patel</a> </div>
+            </div>
+            <div class="navbar-translate"> <a class="navbar-brand" style="text-transform: none;" href="../index.html" rel="tooltip" title="Tag Name" data-placement="bottom" target="_blank"> RjPrime </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-bar bar1"></span> <span class="navbar-toggler-bar bar2"></span> <span class="navbar-toggler-bar bar3"></span> </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="../assets/img/blurred-image-1.jpg">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../rjprime/index.html">Profile</a> </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/RjPrime_info" target="_blank"> <i class="fa fa-twitter"></i>
+                            <p class="d-lg-none d-xl-none">Twitter</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/rjprime.info/" target="_blank"> <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.linkedin.com/in/rjprime" target="_blank"> <i class="fa fa-linkedin"></i>
+                            <p class="d-lg-none d-xl-none">LinkedIn</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" data-placement="bottom" data-toggle="modal" data-target="#Contact" target="_blank"> <i class="now-ui-icons travel_info"></i>
+                            <p class="d-lg-none d-xl-none">Contact Me</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="page-header page-header-small">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/login.jpg');"> </div>
+            <div class="container">
+                <div class="content-center">
+                    <div class="content">
+                        <div class="social-description">
+                            <h2 style="padding-top: 20px;margin-bottom: 10px;">8</h2>
+                            <p>Projects Count</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <!-- <a href="https://www.facebook.com/rjprime.info/" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-facebook-square"></i> </a> <a href="https://twitter.com/RjPrime_info" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-twitter"></i> </a> <a href="https://www.linkedin.com/in/rjprime" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-linkedin"></i> </a> -->
+                        <h5 class="description" style="font-size: 16px; color: #fff;"> "It is important to make an impact in this evolving world. If you don't, your life worth nothing and you are just a same as billion people who lived and just died with regret. I do not want to be part of that billion people. This what fascinate and motivate me to do innovative projects. I will continue doing in order to make huge impacts and for the well-being of human growth."</h5> </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-about-us" style="padding: 40px 0;">
+            <div class="container">
+                <h1 class="title" style="font-size: 35px;text-align: center;">Projects</h1>
+                <div class="separator separator-primary"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <div class="col-md-8 ml-auto mr-auto project_contain">
+                    <div class="row collections">
+                        <div class="col-md-4">
+                            <div style="width:120px;margin: auto;"> <span><div class="dot green" style="margin: 10px;display: inline-block;"></div></span> <span style="display: inline-block;vertical-align: top;margin: 5px;">Initiated</span> </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style="width:120px;margin: auto;"> <span><div class="dot blue" style="margin: 10px;display: inline-block;"></div></span> <span style="display: inline-block;vertical-align: top;margin: 5px;">Live</span> </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style="width:130px;margin: auto;"> <span><div class="dot primary" style="margin: 10px;display: inline-block;"></div></span> <span style="display: inline-block;vertical-align: top;margin: 5px;">Complete</span> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" style="">
+                    <div class="col-md-10 ml-auto mr-auto project_contain">
+                        
+
+                        <div class="row collections">
+                            <div class="col-md-12" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="row collections" style="margin-top: 10px;margin-bottom: 10px;">
+                                        <div class="col-md-5">
+                                            <div class="ml-auto mr-auto img_project" style="margin"> <img style="padding: 10px 30px;opacity: 1;" src="../assets/img/gke.png" />
+                                                <h1 class="title" style="font-size: 20px;text-align: center;margin-bottom: 0px;">Container-based Distributed Application</h1> </div>
+                                            <div class="row collections">
+                                                <div class="col-md-12">
+                                                    <a>
+                                                        <a target="_blank" href="../projects/container_presentation.pdf">
+                                                            <div class="view_button" style="">View</div>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="row collections laptop_marg">
+                                                <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                                    <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                                    <div style="width: 100%;height: 20px;">
+                                                        <div class="dot primary"></div>
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                                    <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px;margin: 0;text-align: center;">Aug 19 - DEC 19.</h5> </div>
+                                            </div>
+                                            <div class="line_gray"></div>
+                                            <h5 class="description" style="font-size: 15px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;"> <br>
+                                                <p style="margin-bottom: 5px;">Container-based Distributed Application.</p>
+                                                <ul style="margin: 0;"> 
+                                                    <li>Developed a distributed container application based on container-based architecture to understand and manage application on Kubernetes & Docker Swarm. Later re-structured application into multiple distributed containers and deployed in multiple node clusters to maximize scalability and availability on Kubernetes.</li>
+                                                </ul>
+                                                <br>
+                                            </h5>
+                                            <div class="line_gray"></div>
+                                        </div>
+                                    </div>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row collections">
+                            <div class="col-md-12" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="row collections" style="margin-top: 10px;margin-bottom: 10px;">
+                                        <div class="col-md-5">
+                                            <div class="ml-auto mr-auto img_project" style="margin"> <img style="padding: 10px 30px;opacity: 1;" src="../assets/img/resume_tracking.jpg" />
+                                                <h1 class="title" style="font-size: 20px;text-align: center;margin-bottom: 0px;">Indeed Resume Tracking System.</h1> </div>
+                                            <div class="row collections">
+                                                <div class="col-md-12">
+                                                    <a>
+                                                        <a target="_blank" href="../projects/resume_presentation.pdf">
+                                                            <div class="view_button" style="">View</div>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="row collections laptop_marg">
+                                                <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                                    <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                                    <div style="width: 100%;height: 20px;">
+                                                        <div class="dot primary"></div>
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                                    <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px;margin: 0;text-align: center;">JAN 19 - JULY 19.</h5> </div>
+                                            </div>
+                                            <div class="line_gray"></div>
+                                            <h5 class="description" style="font-size: 15px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;"> <br><p style="margin-bottom: 5px;">Indeed resume tracking system.</p><ul style="margin: 0;"> <li>Project is about “Resume analyzer dashboard consisting of custom data visualizations for recruiters or companies and can select right candidate which are perfectly fit in job description”.</li><li>Project involves - Data collection (Web Scraping), Data streaming (Kafka), Data storage (Mongodb) and Data visualization (Tableau).</li></ul> <br></h5>
+                                            <div class="line_gray"></div>
+                                        </div>
+                                    </div>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row collections">
+                            <div class="col-md-6" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="ml-auto mr-auto img_project"> <img style="padding: 15px 0px;" src="../assets/img/anomaly.jpg" />
+                                        <h1 class="title" style="font-size: 15px;text-align: center;margin-bottom: 0px;">Real-world <br>Anomaly Detection in Surveillance Videos.</h1> </div>
+                                    <div class="row collections" style="margin: 0px 10px;">
+                                        <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                            <div style="width: 100%;height: 20px;">
+                                                <div class="dot primary"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                            <h5 class="description" style="font-size: 12px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;text-align: center;">JAN 19 - MAY 19.</h5> </div>
+                                    </div>
+                                    <div class="row collections">
+                                        <div class="col-md-12">
+                                            <a href="https://github.com/rajanjitenpatel/C3D_feature_extraction">
+                                                <div class="view_button" style="">View</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line_gray"></div>
+                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px 20px;margin: 0;"> <ul style="margin: 0;"> <li>Project can detect 13 different anomalies occur in live surveillance video. Skills involves in project understanding Deep learning model architecture like C3D model and CNN models, python programming, data handling & analysis, and model optimization. In addition, trained model later integrated with surveillance videos monitoring application.</li></ul> </h5>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="ml-auto mr-auto img_project"> <img style="padding: 10px 30px;" src="../assets/img/smartfox.jpg" />
+                                        <h1 class="title" style="font-size: 25px;text-align: center;margin-bottom: 0px;">Smart-Fox</h1> </div>
+                                    <div class="row collections" style="margin: 0px 10px;">
+                                        <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                            <div style="width: 100%;height: 20px;">
+                                                <div class="dot primary"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                            <h5 class="description" style="font-size: 12px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;text-align: center;">JAN 18 - JULY 18.</h5> </div>
+                                    </div>
+                                    <div class="row collections">
+                                        <div class="col-md-12">
+                                            <a href="Smart-Fox.html">
+                                                <div class="view_button" style="">View</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line_gray"></div>
+                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px 20px;margin: 0;"> <p style="margin-bottom: 5px;">Smart-Fox</p><ul style="margin: 0;"> <li>Project has focus on two main area of home which are electricity and security, and come up with two hardware solution - Smart Switch and Surveillance Cam.</li><li>Purpose to make living simpler and smarter.</li><li>It include six basic feature of household and synchronise it together to work in intelligent way.</li></ul> </h5>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row collections">
+                            <div class="col-md-6" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="ml-auto mr-auto img_project"> <img style="padding: 10px 30px;" src="../assets/img/AHBD.jpg" />
+                                        <h1 class="title" style="font-size: 15px;text-align: center;margin-bottom: 0px;">Advance human behavior detection.</h1> </div>
+                                    <div class="row collections" style="margin: 0px 10px;">
+                                        <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                            <div style="width: 100%;height: 20px;">
+                                                <div class="dot primary"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                            <h5 class="description" style="font-size: 12px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;text-align: center;">AUG 17 - DEC 17.</h5> </div>
+                                    </div>
+                                    <div class="row collections">
+                                        <div class="col-md-12">
+                                            <a href="../projects/AHBD.html">
+                                                <div class="view_button" style="">View</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line_gray"></div>
+                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px 20px;margin: 0;"> <ul style="margin: 0;"> <li>Purpose is to analyze human behavior implemented using Artificial Intelligent using vision & Machine learning approach, project will help in various field like crime detection, identifying economy condition of country, data analysis, further it can also use for medical field.</li><li>Accepted by Manipal University as 4 credits minor-project.</li><li>Project is directed by Dr. Mahesh Jangid expertise professor in Machine learning.</li></ul> </h5>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="ml-auto mr-auto img_project"> <img style="padding: 10px 30px;" src="../assets/img/DrivePlus.jpg" />
+                                        <h1 class="title" style="font-size: 25px;text-align: center;margin-bottom: 0px;">Drive Plus</h1> </div>
+                                    <div class="row collections" style="margin: 0px 10px;">
+                                        <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                            <div style="width: 100%;height: 20px;">
+                                                <div class="dot primary"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                            <h5 class="description" style="font-size: 12px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;text-align: center;">JAN 17 - DEC 17.</h5> </div>
+                                    </div>
+                                    <div class="row collections">
+                                        <div class="col-md-12">
+                                            <a href="../projects/DrivePlus.html">
+                                                <div class="view_button" style="">View</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line_gray"></div>
+                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px 20px;margin: 0;"> <p style="margin-bottom: 5px;">Multi-platform application for Driving Safety.</p><ul style="margin: 0;"> <li>Purpose to help society to spread awareness in public for Safe Driving.</li><li>It provide maximum accuracy, user friendly environment and total 150+ users registered on application.</li><li>Awarded first stand and cash reward for innovative application at ACM mini-hackathon, MUJ.</li></ul> </h5>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row collections">
+                            <div class="col-md-6" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="ml-auto mr-auto img_project"> <img style="padding: 10px 30px;" src="../assets/img/3DT.jpg" />
+                                        <h1 class="title" style="font-size: 25px;text-align: center;margin-bottom: 0px;">3DT</h1> </div>
+                                    <div class="row collections" style="margin: 0px 10px;">
+                                        <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                            <div style="width: 100%;height: 20px;">
+                                                <div class="dot primary"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                            <h5 class="description" style="font-size: 12px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;text-align: center;">Sept 16 - Dec 16</h5> </div>
+                                    </div>
+                                    <div class="row collections">
+                                        <div class="col-md-12">
+                                            <a href="../projects/3DT.html">
+                                                <div class="view_button" style="">View</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line_gray"></div>
+                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px 20px;margin: 0;"> <p style="margin-bottom: 5px;">3DT - Three Dimention Tour.</p><ul style="margin: 0;"> <li>Project - Three Dimension Tour of Manipal University campus on web application using Computer Graphics.</li><li>Developed by four members as a term under professor Mr. Manu Shrivastava assessment.</li><li>Awarded first stand in class, for most enhance graphic development among all 20 projects.</li></ul> </h5>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding: 0 10px;">
+                                <div class="live_project">
+                                    <div class="line_primary"></div>
+                                    <div class="ml-auto mr-auto img_project"> <img style="padding: 10px 30px;" src="../assets/img/incert.jpg" />
+                                        <h1 class="title" style="font-size: 25px;text-align: center;margin-bottom: 0px;">InCert</h1> </div>
+                                    <div class="row collections" style="margin: 0px 10px;">
+                                        <div style="padding: 0 10px;width: 40%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Status</h1>
+                                            <div style="width: 100%;height: 20px;">
+                                                <div class="dot primary"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0 10px;width: 60%;display: inline-block;">
+                                            <h1 class="title" style="font-size: 16px;text-align: center;margin-bottom: 0px;">Time</h1>
+                                            <h5 class="description" style="font-size: 12px; color: #333;font-weight: 400; padding: 5px 20px;margin: 0;text-align: center;">Feb 16 - Sept 16</h5> </div>
+                                    </div>
+                                    <div class="row collections">
+                                        <div class="col-md-12">
+                                            <a href="../projects/InCert.html">
+                                                <div class="view_button" style="">View</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line_gray"></div>
+                                    <h5 class="description" style="font-size: 14px; color: #333;font-weight: 400; padding: 10px 20px 20px;margin: 0;"> <ul style="margin: 0;"> <li>Purpose of software to fully automate process for certification requesting in university.</li><li>Developed for University use, by five students as a term under professor assessment.</li><li>Released and Deployed by the University on 27th Jan 2017. Today more than 6000+ students are using this project services.</li><li>Awarded first stand for innovative project in college AlumNews Newsletter.</li></ul> </h5>
+                                    <div class="line_primary"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-team text-center">
+            <div class="container">
+                <div class="team">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="team-player">
+                                <a class="no_hover" href="../rjprime/" target="_blank" style=""> <img src="../assets/img/Rajan%20Jiten%20Patel.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                    <h4 class="title" style="color: #111">Rajan Jiten Patel</h4>
+                                    <p class="category text-primary">SOFTWARE DEVELOPER</p>
+                                </a>
+                                <p class="description" style="color: #444;"> I am graduate student at California State University, Long Beach. I had done projects on - App Development, Web Application, Web Design, Parallel Processing, Image Processing & Computer Graphics. Have a look into my profile - <a href="../rjprime/index.html">Here</a></p>
+                                <a href="https://www.facebook.com/rjprime.info/" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-facebook-square"></i> </a>
+                                <a href="https://twitter.com/RjPrime_info" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-twitter"></i> </a>
+                                <a href="https://www.linkedin.com/in/rjprime" class="btn btn-primary btn-icon btn-round"> <i class="fa fa-linkedin"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-contact-us text-center">
+            <div class="container">
+                <h2 class="title">Contact me.</h2>
+                <p class="description"></p>
+                <div class="row">
+                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                        <form method="get" action="mailto:rjprime.info@gmail.com">
+                            <div class="input-group input-lg"> <span class="input-group-addon"> <i class="now-ui-icons users_circle-08"></i> </span>
+                                <input type="text" name="subject" class="form-control" placeholder="First Name..."> </div>
+                            <div class="input-group input-lg"> <span class="input-group-addon"> <i class="now-ui-icons ui-1_email-85"></i> </span>
+                                <input type="email" name="cc" class="form-control" placeholder="Email..."> </div>
+                            <div class="textarea-container">
+                                <textarea class="form-control" name="body" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                            </div>
+                            <div class="send-button">
+                                <button style="submit" class="btn btn-primary btn-round btn-block btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-default">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li> <a href="../index.html"> RjPrime </a> </li>
+                        <li> <a data-toggle="modal" data-target="#Contact"> Contact Me </a> </li>
+                        <li> <a href="../rjprime/#about"> About me </a> </li>
+                        <li> <a href="../blog/"> Blog </a> </li>
+                        <li> <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md"> MIT License </a> </li>
+                    </ul>
+                </nav>
+                <div class="copyright"> &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, Designed by <a href="#">Invision</a>. Coded by <a href="#">Creative Tim</a>. </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/js/plugins/bootstrap-switch.js"></script>
+    <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <script src="../assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="../assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+    </body>
 </html>
