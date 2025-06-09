@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,15 +26,15 @@
   <link href="assets/css/demo.css" rel="stylesheet" />
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
   <style type="text/css">
-  
+
       @media (max-width: 768px) 
       {
           .star_width{
               width: 50%;
           }
       }
-      
-  
+
+
     .star_wrapper {
       border: none;
       font-size: 14px;
@@ -66,28 +65,28 @@
     .star_shine:before {
       color: #FFC107;
     }
-    
-    
+
+
 
   </style>
 <script>
   function education() {
     document.getElementById("Feducation").click();
             //document.getElementById('education').scrollIntoView()
-            
+
           }
           function work() {
             document.getElementById("Fwork").click();
             //document.getElementById('work').scrollIntoView()
-            
+
           }
           function achivements() {
             document.getElementById("Fachivements").click();
             //document.getElementById('achivements').scrollIntoView()
-            
+
           }
         </script>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script>
           $(document).ready(function(){
       // Add smooth scrolling to all links
@@ -114,9 +113,174 @@
   });
 });
 </script>
+<style type="text/css">
+
+      @media (max-width: 768px) 
+      {
+          .star_width{
+              width: 50%;
+          }
+      }
+
+
+    .star_wrapper {
+      border: none;
+      font-size: 14px;
+      margin: 0px;
+    }
+
+    .star_wrapper .star_label {
+      position: relative;
+      float: left;
+      color: #ccc;
+    }
+
+    .star_wrapper .star_label:before {
+      margin: 0px 3px;
+      content: "\f005";
+      font-family: FontAwesome;
+      display: inline-block;
+      font-size: 1.1em;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .star_dark:before {
+      color: #ffdb70;
+    }
+
+    .star_shine:before {
+      color: #FFC107;
+    }
+
+    @media (max-width: 768px) {
+        .animated-brain {
+          top: 10%;
+          right: 2%;
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      /* Neuralink Neural Network Background */
+      .neuralink-background {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e  60%, #0f0f23 100%);
+      }
+
+      .neural-network {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      #neuralCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+      }
+
+      .neural-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .neural-pulse {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0, 255, 255, 0.8) 0%, rgba(138, 43, 226, 0.6) 30%, transparent 70%);
+        animation: neuralPulse 3s ease-in-out infinite;
+      }
+
+      .pulse-1 {
+        width: 120px;
+        height: 120px;
+        top: 20%;
+        left: 15%;
+        animation-delay: 0s;
+      }
+
+      .pulse-2 {
+        width: 80px;
+        height: 80px;
+        top: 60%;
+        right: 20%;
+        animation-delay: 0.6s;
+      }
+
+      .pulse-3 {
+        width: 100px;
+        height: 100px;
+        bottom: 25%;
+        left: 30%;
+        animation-delay: 1.2s;
+      }
+
+      .pulse-4 {
+        width: 60px;
+        height: 60px;
+        top: 40%;
+        right: 40%;
+        animation-delay: 1.8s;
+      }
+
+      .pulse-5 {
+        width: 90px;
+        height: 90px;
+        bottom: 40%;
+        right: 15%;
+        animation-delay: 2.4s;
+      }
+
+      @keyframes neuralPulse {
+        0%, 100% {
+          transform: scale(0.8);
+          opacity: 0.6;
+          filter: blur(1px);
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 1;
+          filter: blur(0px);
+        }
+      }
+
+      /* Neural network particles */
+      .neural-particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: #00ffff;
+        border-radius: 50%;
+        box-shadow: 0 0 6px #00ffff;
+      }
+
+      @media (max-width: 768px) {
+        .neural-pulse {
+          transform: scale(0.7);
+        }
+
+        .pulse-1, .pulse-2, .pulse-3, .pulse-4, .pulse-5 {
+          width: 60px;
+          height: 60px;
+        }
+      }
+</style>
 </head>
 <body class="profile-page sidebar-collapse" data-gramm="true" data-gramm_editor="true" data-gramm_id="e2b8ffda-fdc6-945d-14a6-ffb3f1b4b153">
-    
+
   <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="Contact" role="dialog" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -137,8 +301,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
 
   <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
     <div class="container">
@@ -171,15 +335,174 @@
                 <p class="d-lg-none d-xl-none">Contact Me</p>
               </a>
             </li>
-            
+
           </ul>
         </div>
       </div>
     </nav>
 
+    
+    <script>
+    // Neuralink Neural Network Animation
+    class NeuralNetwork {
+      constructor() {
+        this.canvas = document.getElementById('neuralCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.nodes = [];
+        this.connections = [];
+        this.particles = [];
+
+        this.resize();
+        this.init();
+        this.animate();
+
+        window.addEventListener('resize', () => this.resize());
+      }
+
+      resize() {
+        this.canvas.width = this.canvas.offsetWidth;
+        this.canvas.height = this.canvas.offsetHeight;
+      }
+
+      init() {
+        // Create neural nodes
+        const nodeCount = Math.floor((this.canvas.width * this.canvas.height) / 15000);
+
+        for (let i = 0; i < nodeCount; i++) {
+          this.nodes.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            energy: Math.random(),
+            connections: []
+          });
+        }
+
+        // Create connections between nearby nodes
+        for (let i = 0; i < this.nodes.length; i++) {
+          for (let j = i + 1; j < this.nodes.length; j++) {
+            const distance = this.getDistance(this.nodes[i], this.nodes[j]);
+            if (distance < 150 && Math.random() > 0.7) {
+              this.connections.push({
+                nodeA: this.nodes[i],
+                nodeB: this.nodes[j],
+                strength: Math.random()
+              });
+            }
+          }
+        }
+      }
+
+      getDistance(nodeA, nodeB) {
+        return Math.sqrt(Math.pow(nodeA.x - nodeB.x, 2) + Math.pow(nodeA.y - nodeB.y, 2));
+      }
+
+      animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        // Update and draw connections
+        this.connections.forEach(connection => {
+          const { nodeA, nodeB, strength } = connection;
+
+          // Neural signal animation
+          const signal = (Math.sin(Date.now() * 0.002 + strength * 10) + 1) / 2;
+          const opacity = 0.1 + signal * 0.4;
+
+          this.ctx.beginPath();
+          this.ctx.moveTo(nodeA.x, nodeA.y);
+          this.ctx.lineTo(nodeB.x, nodeB.y);
+          this.ctx.strokeStyle = `rgba(0, 255, 255, ${opacity})`;
+          this.ctx.lineWidth = 1 + signal;
+          this.ctx.stroke();
+
+          // Add electrical spark effect
+          if (Math.random() > 0.98) {
+            this.addParticle(
+              nodeA.x + (nodeB.x - nodeA.x) * Math.random(),
+              nodeA.y + (nodeB.y - nodeA.y) * Math.random()
+            );
+          }
+        });
+
+        // Update and draw nodes
+        this.nodes.forEach(node => {
+          // Update position
+          node.x += node.vx;
+          node.y += node.vy;
+
+          // Boundary bouncing
+          if (node.x < 0 || node.x > this.canvas.width) node.vx *= -1;
+          if (node.y < 0 || node.y > this.canvas.height) node.vy *= -1;
+
+          // Update energy
+          node.energy += Math.sin(Date.now() * 0.001 + node.x * 0.01) * 0.01;
+
+          // Draw node
+          const size = 2 + Math.sin(node.energy) * 2;
+          const glow = Math.abs(Math.sin(node.energy)) * 10;
+
+          this.ctx.beginPath();
+          this.ctx.arc(node.x, node.y, size, 0, Math.PI * 2);
+          this.ctx.fillStyle = '#00ffff';
+          this.ctx.shadowBlur = glow;
+          this.ctx.shadowColor = '#00ffff';
+          this.ctx.fill();
+          this.ctx.shadowBlur = 0;
+        });
+
+        // Update and draw particles
+        this.particles = this.particles.filter(particle => {
+          particle.life -= 0.02;
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+
+          if (particle.life > 0) {
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.size * particle.life, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(138, 43, 226, ${particle.life})`;
+            this.ctx.fill();
+            return true;
+          }
+          return false;
+        });
+
+        requestAnimationFrame(() => this.animate());
+      }
+
+      addParticle(x, y) {
+        this.particles.push({
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          life: 1
+        });
+      }
+    }
+
+    // Initialize neural network when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      new NeuralNetwork();
+    });
+    </script>
+
     <div class="wrapper">
       <div class="page-header page-header-small" filter-color="orange">
-        <div class="page-header-image" data-parallax="true" style="background-image: url('assets/img/bg13.jpg');"></div>
+        <div class="page-header-image neuralink-background" data-parallax="true">
+          <!-- Neuralink Neural Network Animation -->
+          <div class="neural-network">
+            <canvas id="neuralCanvas"></canvas>
+            <div class="neural-overlay">
+              <div class="neural-pulse pulse-1"></div>
+              <div class="neural-pulse pulse-2"></div>
+              <div class="neural-pulse pulse-3"></div>
+              <div class="neural-pulse pulse-4"></div>
+              <div class="neural-pulse pulse-5"></div>
+            </div>
+          </div>
+        </div>
 
         <div class="container">
           <div class="content-center">
@@ -305,7 +628,7 @@
                     <div class="title" style="margin-top: 0px;font-size: 17px;">Artificial Intelligence & Machine Learning</div>
 
                     <div class="row collections" style="margin-top: 20px;margin-bottom: 10px;">
-                      
+
                       <div class="col-md-2 star_width">
                         <div class="star_wrapper">
                           <p style="margin: 0;">Machine Learning</p>
@@ -403,7 +726,7 @@
                         <div class="star_wrapper">
                           <p style="margin: 0;">Pandas</p>
                           <label class="star_label star_shine" ></label>
-                          <label class="star_label star_shine"></label>
+                          <label class="star_label star_shine"></label>```text
                           <label class="star_label star_shine"></label>
                           <label class="star_label star_shine"></label>
                           <label class="star_label star_shine"></label>
@@ -434,7 +757,7 @@
                     <div class="title" style="margin-top: 20px;font-size: 17px;">Software Development & Cloud Technologies</div>
 
                     <div class="row collections" style="margin-top: 20px;margin-bottom: 10px;">
-                      
+
                       <div class="col-md-2 star_width">
                         <div class="star_wrapper">
                           <p style="margin: 0;">Python</p>
@@ -684,10 +1007,10 @@
                           <label class="star_label"></label>
                         </div>
                       </div>
-                      
+
                       </div>
 
-                      
+
 
                   </div>
                 </div>
@@ -702,8 +1025,8 @@
                     <div class="dropdown-divider" style="border-top: 2px solid #8d45ad"></div>
 
                     <div class="title" style="margin-top: 0px;font-size: 17px;"> <script> document.write( (/\d{4}/.exec(Date())[0]) - 2020 + ' years of work experience')</script></div>
-                    
-                    
+
+
                     <div class="row collections" style="margin-top: 40px;margin-bottom: 40px;width: 100%;">
                       <div class="col-md-4">
                         <div class="ml-auto mr-auto" style="width: 200px;margin-top: 0px;"><img alt="" class="rounded" src="assets/img/GOOGLE.jpeg" style="width: 170px;padding: 20px 20px;" /></div>
@@ -716,12 +1039,12 @@
                           <div class="dropdown-divider" style="border-top: 1px solid #ccc"></div>
 
                           <h5 style="font-size: 15px;font-weight: 500;">Software Engineer (Present)</h5>
-                          
+
                           <ul></ul>
                        </div>
                      </div>
                    </div>
-                    
+
                     <div class="row collections" style="margin-top: 40px;margin-bottom: 40px;width: 100%;">
                       <div class="col-md-4">
                         <div class="ml-auto mr-auto" style="width: 200px;margin-top: 0px;"><img alt="" class="rounded" src="assets/img/VISA.jpeg" style="width: 170px;padding: 20px 20px;" /></div>
@@ -742,7 +1065,7 @@
                        </div>
                      </div>
                    </div>
-                    
+
                     <div class="row collections" style="margin-top: 40px;margin-bottom: 40px;width: 100%;">
                       <div class="col-md-4">
                         <div class="ml-auto mr-auto" style="width: 200px;margin-top: 0px;"><img alt="" class="rounded" src="assets/img/COB_CSULB.png" style="width: 170px;padding: 20px 20px;" /></div>
@@ -764,9 +1087,9 @@
                        </div>
                      </div>
                    </div>
-                    
-                    
-                    
+
+
+
                     <div class="row collections" style="margin-top: 40px;margin-bottom: 40px;width: 100%;">
                       <div class="col-md-4">
                         <div class="ml-auto mr-auto" style="width: 200px;margin-top: 0px;"><img alt="" class="rounded" src="assets/img/cypherbridge.jpg" style="width: 170px;padding: 20px 20px;" /></div>
