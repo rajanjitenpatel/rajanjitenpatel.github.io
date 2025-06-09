@@ -1525,26 +1525,31 @@
 <script src="assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
 <script>
     $(document).ready(function(){
-        // Only initialize sliders if the required elements exist
-        if (typeof nowuiKit !== 'undefined' && nowuiKit.initSliders) {
-            try {
-                nowuiKit.initSliders();
-            } catch (e) {
-                // Silently handle slider initialization errors since no sliders exist on this page
-            }
-        }
-
-        // Initialize other UI components if they exist
+        // Check if there are any slider elements before initializing
         if (typeof nowuiKit !== 'undefined') {
+            // Only initialize sliders if slider elements exist
+            if ($('.slider').length > 0 && nowuiKit.initSliders) {
+                try {
+                    nowuiKit.initSliders();
+                } catch (e) {
+                    console.log('Slider initialization skipped - no slider elements found');
+                }
+            }
+            
+            // Initialize other UI components safely
             if (nowuiKit.initNavbarImage) {
                 try {
                     nowuiKit.initNavbarImage();
-                } catch (e) {}
+                } catch (e) {
+                    console.log('Navbar image initialization failed');
+                }
             }
             if (nowuiKit.initParallax) {
                 try {
                     nowuiKit.initParallax();
-                } catch (e) {}
+                } catch (e) {
+                    console.log('Parallax initialization failed');
+                }
             }
         }
     });
