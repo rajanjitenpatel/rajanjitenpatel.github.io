@@ -294,47 +294,28 @@
       }
 
       init() {
-        // Create neural nodes distributed anywhere on canvas
+        // Create neural nodes
         const nodeCount = Math.floor((this.canvas.width * this.canvas.height) / 15000);
-        const centerX = this.canvas.width / 2;
-        const centerY = this.canvas.height / 2;
 
         for (let i = 0; i < nodeCount; i++) {
-          // Create nodes anywhere on the canvas
           this.nodes.push({
             x: Math.random() * this.canvas.width,
             y: Math.random() * this.canvas.height,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
             energy: Math.random(),
             connections: []
           });
         }
 
-        // Create connections only for nodes and connection lines that are in center area
-        const centerRadius = Math.min(centerX, centerY) * 0.4; // Center area radius
-        
+        // Create connections between nearby nodes
         for (let i = 0; i < this.nodes.length; i++) {
           for (let j = i + 1; j < this.nodes.length; j++) {
-            const nodeA = this.nodes[i];
-            const nodeB = this.nodes[j];
-            
-            // Check if both nodes are in center area or if the connection line passes through center
-            const distanceFromCenterA = this.getDistance({x: centerX, y: centerY}, nodeA);
-            const distanceFromCenterB = this.getDistance({x: centerX, y: centerY}, nodeB);
-            
-            // Calculate midpoint of connection line
-            const midX = (nodeA.x + nodeB.x) / 2;
-            const midY = (nodeA.y + nodeB.y) / 2;
-            const distanceFromCenterMid = this.getDistance({x: centerX, y: centerY}, {x: midX, y: midY});
-            
-            const distance = this.getDistance(nodeA, nodeB);
-            
-            // Only create connection if the midpoint is in center area and nodes are reasonably close
-            if (distanceFromCenterMid < centerRadius && distance < 120 && Math.random() > 0.5) {
+            const distance = this.getDistance(this.nodes[i], this.nodes[j]);
+            if (distance < 150 && Math.random() > 0.7) {
               this.connections.push({
-                nodeA: nodeA,
-                nodeB: nodeB,
+                nodeA: this.nodes[i],
+                nodeB: this.nodes[j],
                 strength: Math.random()
               });
             }
