@@ -1,5 +1,17 @@
-# www.robotstxt.org/
 
-# Allow crawling of all content
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://rajanjitenpatel.github.io/sitemap.xml
+
+# Block unnecessary files
+Disallow: /assets/sass/
+Disallow: /.DS_Store
+Disallow: /*/.DS_Store
+
+# Allow important pages
+Allow: /projects/
+Allow: /assets/img/
+Allow: /assets/css/
+Allow: /assets/js/
