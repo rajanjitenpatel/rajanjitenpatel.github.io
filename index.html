@@ -294,15 +294,18 @@
       }
 
       init() {
-        // Create neural nodes
-        const nodeCount = Math.floor((this.canvas.width * this.canvas.height) / 15000);
+        // Create neural nodes distributed anywhere on canvas
+        const nodeCount = Math.min(Math.floor((this.canvas.width * this.canvas.height) / 20000), 50);
+        const centerX = this.canvas.width / 2;
+        const centerY = this.canvas.height / 2;
 
         for (let i = 0; i < nodeCount; i++) {
+          // Create nodes anywhere on the canvas
           this.nodes.push({
             x: Math.random() * this.canvas.width,
             y: Math.random() * this.canvas.height,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
             energy: Math.random(),
             connections: []
           });
@@ -718,7 +721,7 @@
                           <label class="star_label star_shine" ></label>
                           <label class="star_label star_shine"></label>
                           <label class="star_label star_shine"></label>
-                          <label class_label star_shine"></label>
+                          <label class="star_label star_shine"></label>
                           <label class="star_label"></label>
                         </div>
                       </div>
@@ -1319,7 +1322,7 @@
               <h5 style="font-size: 15px;font-weight: 700;">InCert</h5>
 
               <ul>
-               <li>Purpose of software to fully automate process for certification requesting in university.</li>
+               <li>Purpose of software tofully automate process for certification requesting in university.</li>
                <li>Developed for University use, by five students as a term under professor assessment.               <li>Released and Deployed by the University on 27th Jan 2017. Today more than 6000+ students are using this project services.</li>
                <li>Awarded first stand for an innovative project in college AlumNews Newsletter.</li>
              </ul>
@@ -1466,4 +1469,30 @@
 <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script><!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
 <script src="assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script><!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        // Only initialize sliders if the required elements exist
+        if (typeof nowuiKit !== 'undefined' && nowuiKit.initSliders) {
+            try {
+                nowuiKit.initSliders();
+            } catch (e) {
+                // Silently handle slider initialization errors since no sliders exist on this page
+            }
+        }
+
+        // Initialize other UI components if they exist
+        if (typeof nowuiKit !== 'undefined') {
+            if (nowuiKit.initNavbarImage) {
+                try {
+                    nowuiKit.initNavbarImage();
+                } catch (e) {}
+            }
+            if (nowuiKit.initParallax) {
+                try {
+                    nowuiKit.initParallax();
+                } catch (e) {}
+            }
+        }
+    });
+</script>
 </html>
