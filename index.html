@@ -89,95 +89,6 @@
         }
       }
       
-      /* Animated SVG Brain Icon */
-      .animated-brain {
-        position: fixed;
-        top: 20%;
-        right: 5%;
-        width: 80px;
-        height: 80px;
-        z-index: 1000;
-        animation: float 4s ease-in-out infinite;
-        opacity: 0.8;
-      }
-      
-      .brain-svg {
-        width: 100%;
-        height: 100%;
-        animation: pulse 2s ease-in-out infinite alternate;
-      }
-      
-      .brain-path {
-        fill: #8d45ad;
-        animation: brainPulse 3s ease-in-out infinite;
-        filter: drop-shadow(0 4px 8px rgba(141, 69, 173, 0.3));
-      }
-      
-      .brain-circuits {
-        stroke: #ff6b35;
-        stroke-width: 2;
-        fill: none;
-        animation: circuitFlow 4s linear infinite;
-        opacity: 0.7;
-      }
-      
-      @keyframes float {
-        0%, 100% { 
-          transform: translateY(0px) rotate(0deg); 
-        }
-        25% { 
-          transform: translateY(-10px) rotate(1deg); 
-        }
-        50% { 
-          transform: translateY(-5px) rotate(0deg); 
-        }
-        75% { 
-          transform: translateY(-15px) rotate(-1deg); 
-        }
-      }
-      
-      @keyframes pulse {
-        0% { 
-          transform: scale(1); 
-        }
-        100% { 
-          transform: scale(1.1); 
-        }
-      }
-      
-      @keyframes brainPulse {
-        0%, 100% { 
-          fill: #8d45ad; 
-        }
-        50% { 
-          fill: #a855c7; 
-        }
-      }
-      
-      @keyframes circuitFlow {
-        0% { 
-          stroke-dasharray: 0, 20; 
-          stroke: #ff6b35; 
-        }
-        50% { 
-          stroke-dasharray: 10, 10; 
-          stroke: #fbbf24; 
-        }
-        100% { 
-          stroke-dasharray: 20, 0; 
-          stroke: #10b981; 
-        }
-      }
-      
-      @media (max-width: 768px) {
-        .animated-brain {
-          top: 10%;
-          right: 2%;
-          width: 60px;
-          height: 60px;
-        }
-      }
-      
   
     .star_wrapper {
       border: none;
@@ -319,34 +230,6 @@
         </div>
       </div>
     </nav>
-
-    <!-- Animated Brain SVG Icon -->
-    <div class="animated-brain">
-      <svg class="brain-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <!-- Brain outline -->
-        <path class="brain-path" d="M50 10 C30 10, 15 25, 15 45 C15 55, 20 65, 25 70 C20 75, 25 85, 35 90 C45 95, 55 95, 65 90 C75 85, 80 75, 75 70 C80 65, 85 55, 85 45 C85 25, 70 10, 50 10 Z"/>
-        
-        <!-- Circuit lines -->
-        <path class="brain-circuits" d="M25 35 L35 35 M35 35 L35 25 M35 35 L45 35"/>
-        <path class="brain-circuits" d="M55 25 L65 25 M65 25 L65 35 M65 35 L75 35"/>
-        <path class="brain-circuits" d="M30 50 L40 50 M40 50 L40 60 M50 45 L60 45"/>
-        <path class="brain-circuits" d="M45 65 L55 65 M55 65 L55 75 M65 55 L75 55"/>
-        
-        <!-- Neural nodes -->
-        <circle cx="35" cy="35" r="2" fill="#fbbf24" opacity="0.8">
-          <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="65" cy="25" r="2" fill="#10b981" opacity="0.8">
-          <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="40" cy="60" r="2" fill="#3b82f6" opacity="0.8">
-          <animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="60" cy="45" r="2" fill="#ef4444" opacity="0.8">
-          <animate attributeName="r" values="2;4;2" dur="2.2s" repeatCount="indefinite"/>
-        </circle>
-      </svg>
-    </div>
 
     <div class="wrapper">
       <div class="page-header page-header-small" filter-color="orange">
