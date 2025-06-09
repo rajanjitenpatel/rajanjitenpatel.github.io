@@ -347,6 +347,219 @@
             font-weight: 500;
         }
         
+        /* Education & Experience Sections */
+        .education-section, .experience-section {
+            padding: 5rem 0;
+        }
+        
+        .education-section {
+            background: white;
+        }
+        
+        .experience-section {
+            background: var(--bg-secondary);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-end;
+        }
+        
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            width: 45%;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -40px;
+        }
+        
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-subtitle {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .skill-level {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+            background: var(--gradient-bg);
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-text {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
+            color: var(--accent-color);
+        }
+        
         /* Footer */
         .footer {
             background: var(--bg-dark);
@@ -415,6 +628,33 @@
             }
             
             .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 40px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -40px;
+                right: auto;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -535,7 +775,7 @@
     </section>
     
     <!-- About Section -->
-    <section class="about-section">
+    <section id="about" class="about-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
@@ -557,8 +797,7 @@
                         I'm passionate about building scalable solutions that make a difference.
                     </p>
                     <p>
-                        Explore my projects to see how I've applied cutting-edge technologies to solve complex challenges 
-                        in various domains. Let's connect and create something amazing together!
+                        "It is important to make an impact in this evolving world. If you don't, your life worth nothing and you are just a same as billion people who lived and just died with regret. I do not want to be part of that billion people. This what fascinate and motivate me to do innovative projects."
                     </p>
                 </div>
                 
@@ -568,17 +807,261 @@
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">5+</div>
+                        <div class="stat-number">10+</div>
                         <div class="stat-label">Technologies Mastered</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">3+</div>
+                        <div class="stat-number">5+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">300+</div>
+                        <div class="stat-number">500+</div>
                         <div class="stat-label">Connections</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic journey and continuous learning</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 2023 - May 2025</div>
+                        <h3 class="timeline-title">Master of Science - Computer Science</h3>
+                        <div class="timeline-subtitle">California State University, Long Beach</div>
+                        <p class="timeline-description">
+                            Specializing in Machine Learning, Deep Learning, and Advanced Software Engineering. 
+                            Working on cutting-edge research in AI and developing innovative solutions for real-world problems.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2017 - May 2021</div>
+                        <h3 class="timeline-title">Bachelor of Engineering - Computer Engineering</h3>
+                        <div class="timeline-subtitle">Manipal University Jaipur</div>
+                        <p class="timeline-description">
+                            Comprehensive foundation in computer engineering, software development, and system design. 
+                            Graduated with distinction and completed multiple innovative projects.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2015 - May 2017</div>
+                        <h3 class="timeline-title">Higher Secondary Education - Science</h3>
+                        <div class="timeline-subtitle">Infocity Junior Science College</div>
+                        <p class="timeline-description">
+                            Focused on Mathematics, Physics, and Chemistry with additional emphasis on computer science fundamentals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Building innovative solutions across various domains</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2024 - Present</div>
+                        <h3 class="timeline-title">Graduate Research Assistant</h3>
+                        <div class="timeline-subtitle">California State University, Long Beach</div>
+                        <p class="timeline-description">
+                            Conducting research in machine learning algorithms and their applications in computer vision. 
+                            Developing novel approaches for image processing and pattern recognition.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jul 2021 - Jul 2023</div>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <div class="timeline-subtitle">SoftWeb Solutions Inc.</div>
+                        <p class="timeline-description">
+                            Developed full-stack web applications using modern technologies. Led development of multiple 
+                            client projects and mentored junior developers. Specialized in React, Node.js, and cloud deployment.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2021 - Jun 2021</div>
+                        <h3 class="timeline-title">Software Development Intern</h3>
+                        <div class="timeline-subtitle">Kalp Systems</div>
+                        <p class="timeline-description">
+                            Worked on IoT-based solutions and mobile application development. Gained hands-on experience 
+                            with embedded systems and real-time data processing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">C++</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Web Technologies</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">React.js</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Node.js</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Express.js</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI/ML Technologies</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">TensorFlow</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PyTorch</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Scikit-learn</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">OpenCV</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Pandas/NumPy</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Git/GitHub</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">VS Code</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Ready to collaborate on your next project? Let's discuss how we can work together.
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-title">Personal Email</h3>
+                    <p class="contact-text">For general inquiries and collaboration</p>
+                    <a href="mailto:rajanjitenpatel@gmail.com" class="contact-link">rajanjitenpatel@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="contact-title">Professional Email</h3>
+                    <p class="contact-text">For business and professional opportunities</p>
+                    <a href="mailto:rjprime.info@gmail.com" class="contact-link">rjprime.info@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-title">Location</h3>
+                    <p class="contact-text">Currently based in</p>
+                    <p class="contact-link">Long Beach, California</p>
                 </div>
             </div>
         </div>
@@ -590,7 +1073,10 @@
             <div class="footer-content">
                 <div class="footer-links">
                     <a href="./projects/" class="footer-link">Projects</a>
-                    <a href="./rjprime/" class="footer-link">More About Me</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#education" class="footer-link">Education</a>
+                    <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#skills" class="footer-link">Skills</a>
                     <a href="mailto:rajanjitenpatel@gmail.com" class="footer-link">Contact</a>
                 </div>
             </div>
