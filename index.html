@@ -1,1153 +1,579 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="theme-color" content="#8D44AD">
+    <meta name="theme-color" content="#f96332">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>RjPrime - Rajan Jiten Patel</title>
     <meta name="description" content="RjPrime - Rajan Jiten Patel, Master student at California State University, Long Beach. Portfolio showcasing projects in AI, ML, IoT, Web Development, and more.">
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Modern Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/now-ui-kit.css" rel="stylesheet" />
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .main {
+            background: #FFFFFF;
+            position: relative;
+            z-index: 3;
         }
-        
-        :root {
-            --primary-color: #8D44AD;
-            --primary-light: #9B59B6;
-            --primary-dark: #7D3C98;
-            --accent-color: #00D4AA;
-            --text-primary: #2C3E50;
-            --text-secondary: #7F8C8D;
-            --text-light: #BDC3C7;
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F8F9FA;
-            --bg-dark: #1A1A1A;
-            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
-            --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.2);
-            --border-radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        .section {
+            padding: 70px 0;
+            position: relative;
+            background: #FFFFFF;
         }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-primary);
-            overflow-x: hidden;
+
+        .section-story-overview {
+            padding: 50px 0;
         }
-        
-        /* Header Section */
-        .hero-section {
-            min-height: 100vh;
-            background: var(--gradient-bg);
+
+        .section-story-overview .image-container:nth-child(2) {
+            margin-top: 6%;
+        }
+
+        .section-story-overview .image-container:nth-child(3) {
+            margin-top: 8%;
+        }
+
+        .section-story-overview .image-container {
+            margin-top: 15%;
+        }
+
+        .tim-note {
+            text-transform: capitalize;
+        }
+
+        .page-header {
+            height: 100vh;
+            min-height: 600px;
+            background-position: center center;
+            background-size: cover;
             display: flex;
             align-items: center;
             position: relative;
+        }
+
+        .page-header .motto {
+            text-align: center;
+        }
+
+        .page-header .motto h1 {
+            font-size: 5.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .page-header .motto h6 {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        .page-header-image {
+            background-image: url('./assets/img/bg1.jpg');
+        }
+
+        .filter::after {
+            background: rgba(0, 0, 0, 0.5);
+            content: "";
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .motto {
+            z-index: 3;
+            position: relative;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            box-shadow: 0 16px 42px -2px rgba(0, 0, 0, 0.12), 0 6px 18px 0 rgba(0, 0, 0, 0.12), 0 4px 15px -8px rgba(0, 0, 0, 0.42);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team .team-player .card-avatar {
+            max-width: 120px;
+            max-height: 120px;
+            margin: -50px auto 0;
+            border-radius: 50%;
             overflow: hidden;
         }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            pointer-events: none;
+
+        .card-plain {
+            background: transparent;
+            box-shadow: none;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+
+        .card-plain .footer {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 40px;
+            padding: 0px;
+        }
+
+        .navbar .navbar-translate {
+            width: 100%;
             position: relative;
-            z-index: 2;
-        }
-        
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .hero-text {
-            color: white;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            transition: var(--transition);
-        }
-        
-        .hero-badge:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-        
-        .hero-badge i {
-            color: var(--accent-color);
-        }
-        
-        .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1rem;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-        }
-        
-        .hero-image {
             display: flex;
-            justify-content: center;
+            -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+            -ms-flex-align: center;
             align-items: center;
-            position: relative;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
         }
-        
-        .profile-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 2rem;
-            padding: 2rem;
-            box-shadow: var(--shadow-heavy);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transform: rotate(-2deg);
-            transition: var(--transition);
-        }
-        
-        .profile-card:hover {
-            transform: rotate(0deg) scale(1.05);
-        }
-        
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary-color);
-            box-shadow: var(--shadow-medium);
-            margin-bottom: 1rem;
-        }
-        
-        .profile-info h3 {
-            color: var(--text-primary);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .profile-info p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .contact-info:hover {
-            color: var(--primary-color);
-        }
-        
-        /* Action Buttons */
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            border-radius: var(--border-radius);
-            font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .btn-primary {
-            background: var(--accent-color);
-            color: white;
-            box-shadow: var(--shadow-light);
-        }
-        
-        .btn-primary:hover {
-            background: #00B894;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 1.2rem;
-        }
-        
-        .social-link:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        /* About Section */
-        .about-section {
-            padding: 5rem 0;
-            background: var(--bg-secondary);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-        
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-        
-        .highlight {
-            color: var(--primary-color);
+
+        .navbar .navbar-brand {
+            color: #FFFFFF;
+            font-size: 1.125rem;
+            padding-top: .3125rem;
+            padding-bottom: .3125rem;
+            margin-right: 1rem;
+            line-height: inherit;
+            white-space: nowrap;
             font-weight: 600;
         }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-        
-        .stat-card {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-light);
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        /* Education & Experience Sections */
-        .education-section, .experience-section {
-            padding: 5rem 0;
-        }
-        
-        .education-section {
-            background: white;
-        }
-        
-        .experience-section {
-            background: var(--bg-secondary);
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--primary-color);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            justify-content: flex-end;
-        }
-        
-        .timeline-item:nth-child(even) {
-            justify-content: flex-start;
-        }
-        
-        .timeline-content {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-light);
-            width: 45%;
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 20px;
-            height: 20px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            left: -40px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-content::before {
-            right: -40px;
-        }
-        
-        .timeline-date {
-            color: var(--primary-color);
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-size: 11px;
             font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
         }
-        
-        .timeline-title {
-            font-size: 1.3rem;
+
+        .highlight-text {
+            color: #f96332;
             font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
         }
-        
-        .timeline-subtitle {
-            color: var(--text-secondary);
-            font-weight: 500;
-            margin-bottom: 1rem;
+
+        .social-line .btn {
+            margin: 0 4px;
         }
-        
-        .timeline-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        
-        /* Skills Section */
-        .skills-section {
-            padding: 5rem 0;
-            background: white;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .skill-category {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-light);
-        }
-        
-        .skill-category h3 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .skill-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .skill-name {
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-        
-        .skill-level {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            padding: 0.25rem 0.5rem;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-        
-        /* Contact Section */
-        .contact-section {
-            padding: 5rem 0;
-            background: var(--gradient-bg);
-            color: white;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .contact-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-        
-        .contact-icon {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-        
-        .contact-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-text {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 1rem;
-        }
-        
-        .contact-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .contact-link:hover {
-            color: var(--accent-color);
-        }
-        
-        /* Footer */
+
         .footer {
-            background: var(--bg-dark);
-            color: white;
-            padding: 3rem 0 1rem;
+            background: #1e1e2f;
+            color: #ffffff;
+        }
+
+        .footer .copyright {
+            padding: 15px 0;
+        }
+
+        .stats .stats-title {
+            color: #f96332;
             text-align: center;
         }
-        
-        .footer-content {
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-link {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .footer-link:hover {
-            color: var(--accent-color);
-        }
-        
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-            
-            .hero-image {
-                order: -1;
-            }
-            
-            .profile-card {
-                transform: none;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            
-            .hero-actions {
-                justify-content: center;
-            }
-            
-            .social-links {
-                justify-content: center;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .timeline::before {
-                left: 20px;
-            }
-            
-            .timeline-item {
-                justify-content: flex-start !important;
-            }
-            
-            .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 40px;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-content::before,
-            .timeline-item:nth-child(even) .timeline-content::before {
-                left: -40px;
-                right: auto;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        /* Floating animation for profile card */
-        @keyframes float {
-            0%, 100% {
-                transform: rotate(-2deg) translateY(0px);
-            }
-            50% {
-                transform: rotate(-2deg) translateY(-10px);
-            }
-        }
-        
-        .profile-card {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .profile-card:hover {
-            animation-play-state: paused;
+
+        .stats .stats-number {
+            font-size: 2.8em;
+            color: #2c2c54;
+            text-align: center;
+            font-weight: 700;
         }
     </style>
 </head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero-section">
+<body class="index-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="400">
         <div class="container">
-            <div class="hero-content animate-fade-in">
-                <div class="hero-text">
-                    <div class="hero-badge">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>MS Computer Science Student</span>
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="./index.html">
+                    RjPrime
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./projects/">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="wrapper">
+        <div class="page-header page-header-small page-header-image" data-parallax="true">
+            <div class="filter"></div>
+            <div class="container">
+                <div class="motto text-center">
+                    <h1>Hello, I'm Rajan Jiten Patel</h1>
+                    <h3>Full-Stack Developer & AI Enthusiast</h3>
+                    <br />
+                    <a href="./projects/" class="btn btn-outline-neutral btn-round">
+                        <i class="fa fa-play"></i>View My Work
+                    </a>
+                    <a href="mailto:rajanjitenpatel@gmail.com" class="btn btn-outline-neutral btn-round">
+                        <i class="fa fa-envelope"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="section text-center" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 ml-auto mr-auto">
+                            <h2 class="title">About Me</h2>
+                            <h5 class="description">
+                                Welcome to my digital portfolio! I'm <span class="highlight-text">Rajan Jiten Patel</span>, 
+                                a Software Engineer at <span class="highlight-text">Google LLC</span> with a Master's degree in Computer Science from California State University, Long Beach.
+                            </h5>
+                            <br>
+                            <div class="profile-photo">
+                                <img src="assets/img/Rajan Jiten Patel.jpg" alt="Rajan Jiten Patel">
+                            </div>
+                            <p>
+                                With over <span class="highlight-text">5+ years of professional experience</span> at 
+                                <span class="highlight-text">Google</span> and <span class="highlight-text">Visa Inc.</span>, I specialize in 
+                                <span class="highlight-text">Artificial Intelligence</span>, <span class="highlight-text">Machine Learning</span>, 
+                                <span class="highlight-text">Computer Vision</span>, and <span class="highlight-text">Full-Stack Development</span>. 
+                                I'm proficient in <span class="highlight-text">TensorFlow</span>, <span class="highlight-text">PyTorch</span>, 
+                                <span class="highlight-text">OpenCV</span>, and modern cloud technologies.
+                            </p>
+                            <p>
+                                I'm passionate about leveraging AI and machine learning to build scalable solutions that solve real-world problems and impact millions of users worldwide.
+                            </p>
+                        </div>
                     </div>
-                    
-                    <h1 class="hero-title">Hello, I'm Rajan Jiten Patel</h1>
-                    <h2 class="hero-subtitle">Full-Stack Developer & AI Enthusiast</h2>
-                    
-                    <p class="hero-description">
-                        Master's student at California State University, Long Beach, passionate about building innovative solutions in AI, Machine Learning, IoT, and Web Development.
-                    </p>
-                    
-                    <div class="hero-actions">
-                        <a href="./projects/" class="btn btn-primary">
-                            <i class="fas fa-folder-open"></i>
-                            View My Work
-                        </a>
-                        <a href="mailto:rajanjitenpatel@gmail.com" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Get In Touch
-                        </a>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/rajanjitenpatel" class="social-link" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rjprime" class="social-link" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com/RjPrime_info" class="social-link" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCWABBzVpCW5yKnbwMW1xa8g" class="social-link" title="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://www.hackerrank.com/rjprime" class="social-link" title="HackerRank">
-                            <i class="fab fa-hackerrank"></i>
-                        </a>
-                        <a href="https://leetcode.com/rjprime/" class="social-link" title="LeetCode">
-                            <i class="fas fa-code"></i>
-                        </a>
-                        <a href="https://www.facebook.com/rjprime.info/" class="social-link" title="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="stats">
+                                <h1 class="stats-number">50+</h1>
+                                <h4 class="stats-title">Projects Completed</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats">
+                                <h1 class="stats-number">10+</h1>
+                                <h4 class="stats-title">Technologies Mastered</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats">
+                                <h1 class="stats-number">5+</h1>
+                                <h4 class="stats-title">Years Experience</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats">
+                                <h1 class="stats-number">500+</h1>
+                                <h4 class="stats-title">Connections</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="hero-image">
-                    <div class="profile-card">
-                        <img src="assets/img/Rajan Jiten Patel.jpg" alt="Rajan Jiten Patel" class="profile-image">
-                        <div class="profile-info">
-                            <h3>RjPrime</h3>
-                            <p>Computer Engineer & Entrepreneur</p>
-                            <a href="mailto:rajanjitenpatel@gmail.com" class="contact-info">
-                                <i class="fas fa-envelope"></i>
-                                rajanjitenpatel@gmail.com
-                            </a>
+            </div>
+
+            <div class="section section-story-overview" id="education">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="title text-center">Education</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-plain">
+                                <div class="card-body">
+                                    <div class="card-avatar">
+                                        <img class="img img-raised" src="assets/img/COB_CSULB.png">
+                                    </div>
+                                    <h4 class="card-title">Master of Science - Computer Science</h4>
+                                    <h6 class="card-category text-muted">California State University, Long Beach</h6>
+                                    <p class="card-description">
+                                        Specialized in Machine Learning, Deep Learning, and Advanced Software Engineering. 
+                                        Completed cutting-edge research in AI and developed innovative solutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-plain">
+                                <div class="card-body">
+                                    <div class="card-avatar">
+                                        <img class="img img-raised" src="assets/img/muj.jpg">
+                                    </div>
+                                    <h4 class="card-title">Bachelor of Engineering - Computer Engineering</h4>
+                                    <h6 class="card-category text-muted">Manipal University Jaipur</h6>
+                                    <p class="card-description">
+                                        Comprehensive foundation in computer engineering, software development, and system design. 
+                                        Graduated with distinction and completed multiple innovative projects.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-team text-center" id="experience">
+                <div class="container">
+                    <h2 class="title">Professional Experience</h2>
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="team-player">
+                                    <div class="card card-plain">
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <div class="card-avatar">
+                                                <img src="assets/img/GOOGLE.jpeg" alt="Google" class="img-raised">
+                                            </div>
+                                        </div>
+                                        <h4 class="card-title">Software Engineer
+                                            <br>
+                                            <small class="card-description text-muted">Google LLC</small>
+                                        </h4>
+                                        <p class="card-description">Working on large-scale distributed systems and cloud infrastructure. Contributing to innovative solutions that impact millions of users worldwide.</p>
+                                        <div class="footer">
+                                            <div class="social-line">
+                                                <a href="#" class="btn btn-neutral btn-icon btn-round" data-toggle="tooltip" data-original-title="Present">
+                                                    <i class="fa fa-clock-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-player">
+                                    <div class="card card-plain">
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <div class="card-avatar">
+                                                <img src="assets/img/VISA.jpeg" alt="Visa" class="img-raised">
+                                            </div>
+                                        </div>
+                                        <h4 class="card-title">Sr. Software Engineer
+                                            <br>
+                                            <small class="card-description text-muted">Visa Inc.</small>
+                                        </h4>
+                                        <p class="card-description">Full stack engineer working on Private Cloud Platform. Developed cloud environment provisioning solutions with Terraform and modern web technologies.</p>
+                                        <div class="footer">
+                                            <div class="social-line">
+                                                <a href="#" class="btn btn-neutral btn-icon btn-round" data-toggle="tooltip" data-original-title="1 year 6 months">
+                                                    <i class="fa fa-briefcase"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-player">
+                                    <div class="card card-plain">
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <div class="card-avatar">
+                                                <img src="assets/img/softweb.jpg" alt="SoftWeb" class="img-raised">
+                                            </div>
+                                        </div>
+                                        <h4 class="card-title">Software Developer
+                                            <br>
+                                            <small class="card-description text-muted">SoftWeb Solutions Inc.</small>
+                                        </h4>
+                                        <p class="card-description">Developed full-stack web applications using modern technologies. Led development of multiple client projects and mentored junior developers.</p>
+                                        <div class="footer">
+                                            <div class="social-line">
+                                                <a href="#" class="btn btn-neutral btn-icon btn-round" data-toggle="tooltip" data-original-title="Jul 2021 - Jul 2023">
+                                                    <i class="fa fa-code"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="contact">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-8 ml-auto mr-auto">
+                            <h2 class="title">Get In Touch</h2>
+                            <h5 class="description">Ready to collaborate on your next project? Let's discuss how we can work together.</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card card-plain">
+                                <div class="card-body">
+                                    <i class="fa fa-envelope fa-3x text-primary"></i>
+                                    <h4 class="card-title">Personal Email</h4>
+                                    <p class="card-description">For general inquiries and collaboration</p>
+                                    <a href="mailto:rajanjitenpatel@gmail.com" class="btn btn-primary btn-round">
+                                        rajanjitenpatel@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-plain">
+                                <div class="card-body">
+                                    <i class="fa fa-briefcase fa-3x text-primary"></i>
+                                    <h4 class="card-title">Professional Email</h4>
+                                    <p class="card-description">For business and professional opportunities</p>
+                                    <a href="mailto:rjprime.info@gmail.com" class="btn btn-primary btn-round">
+                                        rjprime.info@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-plain">
+                                <div class="card-body">
+                                    <i class="fa fa-map-marker fa-3x text-primary"></i>
+                                    <h4 class="card-title">Location</h4>
+                                    <p class="card-description">Currently based in</p>
+                                    <p class="text-primary"><strong>Long Beach, California</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="social-line">
+                                <a href="https://github.com/rajanjitenpatel" class="btn btn-neutral btn-icon btn-round" title="GitHub">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/rjprime" class="btn btn-neutral btn-icon btn-round" title="LinkedIn">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="https://twitter.com/RjPrime_info" class="btn btn-neutral btn-icon btn-round" title="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCWABBzVpCW5yKnbwMW1xa8g" class="btn btn-neutral btn-icon btn-round" title="YouTube">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                                <a href="https://www.hackerrank.com/rjprime" class="btn btn-neutral btn-icon btn-round" title="HackerRank">
+                                    <i class="fa fa-code"></i>
+                                </a>
+                                <a href="https://leetcode.com/rjprime/" class="btn btn-neutral btn-icon btn-round" title="LeetCode">
+                                    <i class="fa fa-terminal"></i>
+                                </a>
+                                <a href="https://www.facebook.com/rjprime.info/" class="btn btn-neutral btn-icon btn-round" title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">
-                    Passionate about creating innovative solutions that bridge technology and real-world problems
-                </p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Welcome to my digital portfolio! I'm <span class="highlight">Rajan Jiten Patel</span>, 
-                        a Software Engineer at <span class="highlight">Google LLC</span> with a Master's degree in Computer Science from California State University, Long Beach.
-                    </p>
-                    <p>
-                        With over <span class="highlight">5+ years of professional experience</span> at 
-                        <span class="highlight">Google</span> and <span class="highlight">Visa Inc.</span>, I specialize in 
-                        <span class="highlight">Artificial Intelligence</span>, <span class="highlight">Machine Learning</span>, 
-                        <span class="highlight">Computer Vision</span>, and <span class="highlight">Full-Stack Development</span>. 
-                        I'm proficient in <span class="highlight">TensorFlow</span>, <span class="highlight">PyTorch</span>, 
-                        <span class="highlight">OpenCV</span>, and modern cloud technologies.
-                    </p>
-                    <p>
-                        I'm passionate about leveraging AI and machine learning to build scalable solutions that solve real-world problems and impact millions of users worldwide.
-                    </p>
-                </div>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Technologies Mastered</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Connections</div>
-                    </div>
+
+        <footer class="footer footer-default">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./projects/">
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#education">
+                                Education
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#experience">
+                                Experience
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:rajanjitenpatel@gmail.com">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright" id="copyright">
+                    &copy; <script>document.write(new Date().getFullYear())</script>, Designed & Developed with ❤️ by <a href="#">Rajan Jiten Patel</a>.
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <p class="section-subtitle">Academic journey and continuous learning</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Master of Science - Computer Science</h3>
-                        <div class="timeline-subtitle">California State University, Long Beach</div>
-                        <p class="timeline-description">
-                            Specialized in Machine Learning, Deep Learning, and Advanced Software Engineering. 
-                            Completed cutting-edge research in AI and developed innovative solutions for real-world problems.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Bachelor of Engineering - Computer Engineering</h3>
-                        <div class="timeline-subtitle">Manipal University Jaipur</div>
-                        <p class="timeline-description">
-                            Comprehensive foundation in computer engineering, software development, and system design. 
-                            Graduated with distinction and completed multiple innovative projects.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Higher Secondary Education - Science</h3>
-                        <div class="timeline-subtitle">Infocity Junior Science College</div>
-                        <p class="timeline-description">
-                            Focused on Mathematics, Physics, and Chemistry with additional emphasis on computer science fundamentals.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">Building innovative solutions across various domains - 5+ years of industry experience</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Present</div>
-                        <h3 class="timeline-title">Software Engineer</h3>
-                        <div class="timeline-subtitle">Google LLC</div>
-                        <p class="timeline-description">
-                            Working on large-scale distributed systems and cloud infrastructure. Contributing to innovative 
-                            solutions that impact millions of users worldwide. Expertise in system design, performance optimization, 
-                            and scalable architecture development.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">1 year 6 months</div>
-                        <h3 class="timeline-title">Sr. Software Engineer</h3>
-                        <div class="timeline-subtitle">Visa Inc.</div>
-                        <p class="timeline-description">
-                            Full stack engineer worked on Private Cloud Platform. Developed multiple new features with complete 
-                            responsibility of web app which is used for server operations in cloud. Worked on initiative project, 
-                            a large scale cloud environment provisioning solution with new technology like Terraform.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jan 2024 - Present</div>
-                        <h3 class="timeline-title">Graduate Research Assistant</h3>
-                        <div class="timeline-subtitle">California State University, Long Beach</div>
-                        <p class="timeline-description">
-                            Conducting research in machine learning algorithms and their applications in computer vision. 
-                            Developing novel approaches for image processing and pattern recognition.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jul 2021 - Jul 2023</div>
-                        <h3 class="timeline-title">Software Developer</h3>
-                        <div class="timeline-subtitle">SoftWeb Solutions Inc.</div>
-                        <p class="timeline-description">
-                            Developed full-stack web applications using modern technologies. Led development of multiple 
-                            client projects and mentored junior developers. Specialized in React, Node.js, and cloud deployment.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jan 2021 - Jun 2021</div>
-                        <h3 class="timeline-title">Software Development Intern</h3>
-                        <div class="timeline-subtitle">Kalp Systems</div>
-                        <p class="timeline-description">
-                            Worked on IoT-based solutions and mobile application development. Gained hands-on experience 
-                            with embedded systems and real-time data processing.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Java</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">C++</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">SQL</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Web Technologies</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">React.js</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Node.js</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">HTML/CSS</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Express.js</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">MongoDB</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> AI/ML Technologies</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">TensorFlow</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">PyTorch</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Scikit-learn</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">OpenCV</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Pandas/NumPy</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Git/GitHub</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Docker</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">AWS</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Linux</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">VS Code</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">
-                    Ready to collaborate on your next project? Let's discuss how we can work together.
-                </p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="contact-title">Personal Email</h3>
-                    <p class="contact-text">For general inquiries and collaboration</p>
-                    <a href="mailto:rajanjitenpatel@gmail.com" class="contact-link">rajanjitenpatel@gmail.com</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="contact-title">Professional Email</h3>
-                    <p class="contact-text">For business and professional opportunities</p>
-                    <a href="mailto:rjprime.info@gmail.com" class="contact-link">rjprime.info@gmail.com</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3 class="contact-title">Location</h3>
-                    <p class="contact-text">Currently based in</p>
-                    <p class="contact-link">Long Beach, California</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="./projects/" class="footer-link">Projects</a>
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#education" class="footer-link">Education</a>
-                    <a href="#experience" class="footer-link">Experience</a>
-                    <a href="#skills" class="footer-link">Skills</a>
-                    <a href="mailto:rajanjitenpatel@gmail.com" class="footer-link">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 RjPrime. Designed & Developed with ❤️ by Rajan Jiten Patel</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        </footer>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="assets/js/plugins/bootstrap-switch.js"></script>
+
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+
+    <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+    <script src="assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // the body of this function is in assets/js/now-ui-kit.js
+            nowuiKit.initSliders();
         });
-        
-        // Add intersection observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('.stat-card, .about-text').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
+
+        function scrollToDownload() {
+            if ($('.section-download').length != 0) {
+                $("html, body").animate({
+                    scrollTop: $('.section-download').offset().top
+                }, 1000);
+            }
+        }
     </script>
 </body>
 </html>
