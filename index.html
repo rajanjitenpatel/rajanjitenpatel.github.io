@@ -35,60 +35,6 @@
           }
       }
       
-      .animated-background {
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: backgroundSlideshow 20s infinite;
-      }
-      
-      @keyframes backgroundSlideshow {
-        0% { 
-          background-image: url('assets/img/bg13.jpg');
-          opacity: 1;
-        }
-        20% { 
-          background-image: url('assets/img/bg13.jpg');
-          opacity: 1;
-        }
-        25% { 
-          opacity: 0;
-        }
-        30% { 
-          background-image: url('assets/img/bg11.jpg');
-          opacity: 1;
-        }
-        45% { 
-          background-image: url('assets/img/bg11.jpg');
-          opacity: 1;
-        }
-        50% { 
-          opacity: 0;
-        }
-        55% { 
-          background-image: url('assets/img/bg21.jpg');
-          opacity: 1;
-        }
-        70% { 
-          background-image: url('assets/img/bg21.jpg');
-          opacity: 1;
-        }
-        75% { 
-          opacity: 0;
-        }
-        80% { 
-          background-image: url('assets/img/bg26.jpg');
-          opacity: 1;
-        }
-        95% { 
-          background-image: url('assets/img/bg26.jpg');
-          opacity: 1;
-        }
-        100% { 
-          opacity: 0;
-        }
-      }
-      
   
     .star_wrapper {
       border: none;
@@ -233,7 +179,7 @@
 
     <div class="wrapper">
       <div class="page-header page-header-small" filter-color="orange">
-        <div class="page-header-image animated-background" data-parallax="true"></div>
+        <div class="page-header-image" data-parallax="true" style="background-image: url('assets/img/bg13.jpg');"></div>
 
         <div class="container">
           <div class="content-center">
