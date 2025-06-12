@@ -3732,7 +3732,7 @@ Created using IcoMoon - icomoon.io
     color: rgba(255, 255, 255, 0.5); }
   .page-header.page-header-small {
     height: 60vh;
-    max-height: 440px; }
+    max-height: 640px; }
   .page-header:after, .page-header:before {
     position: absolute;
     z-index: 0;
