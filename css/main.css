@@ -56,6 +56,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Reduce font size for AI specialization text */
+.ai-specialization {
+    font-size: 0.85em;
+}
+
 
 
 
