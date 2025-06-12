@@ -196,11 +196,3 @@ textarea {
         page-break-after: avoid;
     }
 }
-
-@media only screen and (max-width: 768px) {
-    .intro {
-        height: auto;
-        min-height: 80vh;
-        padding: 60px 0;
-    }
-}
