@@ -56,17 +56,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* Intro section text truncation */
-.intro-text-truncate {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.4em;
-    max-height: 5.6em; /* 4 lines × 1.4em line-height */
-}
-
 
 
 
